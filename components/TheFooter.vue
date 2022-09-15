@@ -85,7 +85,7 @@
                                 <p class="label-text" data-v-993a5bd0="" data-v-432826d2="">感谢您的订阅！ </p>
                                 <!---->
                             </div>
-                            <!--[--><input type="email" class="input" required="" placeholder="输入EMAIL" value="">
+                            <!--[--><input type="email" class="input" placeholder="输入EMAIL" value="">
                             <!--]-->
                             <!---->
                             <!---->

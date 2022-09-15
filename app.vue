@@ -21,4 +21,9 @@
 .v-toolbar__content {
   padding: 0px !important;
 }
+
+a{
+  text-decoration: unset;
+  color: unset;
+}
 </style>

@@ -5,6 +5,10 @@
                 <h1 class="title-txt" >最新资讯</h1>
                 <h2 class="subtitle-txt" >让您轻松掌握热门市场动态</h2>
             </div>
+            <a href="" class="see-more-link">
+                <p>看更多</p>
+                <v-icon>mdi-chevron-right</v-icon>
+            </a>
         </div>
     </div>
 </template>
@@ -39,6 +43,12 @@
             color: #ee3324;
         }
     }
+    a.see-more-link{
+        display: flex;
+        align-items: flex-end;
+        font-size: 14px;
+        color: #a6a6a6;
+    }
 }
 
 .title-wrapper .title .subtitle-txt {
@@ -58,6 +68,10 @@
             .subtitle-txt{
                 display: block;
             }
+        }
+        a.see-more-link{
+            font-size: 16px;
+            color: #404040;
         }
     }
 }

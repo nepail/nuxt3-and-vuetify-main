@@ -4,7 +4,7 @@
             <prop-cycle></prop-cycle>
             <div class="grid-area">
                 <div class="left-grid-area">
-                    <carousel-article></carousel-article>
+                    <article-title></article-title>
                 </div>
                 <div class="right-grid-area">
 

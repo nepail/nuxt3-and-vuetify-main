@@ -15,7 +15,7 @@
 
 <script setup>
 const props = defineProps({
-    data: String
+    data: Object
 })
 
 console.log(props)

@@ -3,7 +3,7 @@
         <div class="slider">
             <!-- 輪播圖位置 -->
             <div class="sliderWrapper">
-                <div>{{contIndex}}</div>
+                <!-- <div>{{contIndex}}</div> -->
                 <v-carousel 
                     cycle 
                     height="400" 
@@ -20,15 +20,25 @@
                     <template v-slot:next="{ props }">
                         <v-btn variant="elevated" color="info" @click="props.onClick">Next slide</v-btn>
                     </template> -->
-                    <v-carousel-item v-for="(content, i) in contents" :key="i">
-                        <v-sheet :color="colors[i]" height="100%">
+                    <nuxt-link to="/about">
+                        <v-carousel-item 
+                            v-for="(content, i) in contents" 
+                            :src="content.src"
+                            :key="i">
+                            <div class="content">
+                                <h3>{{ content.description}}</h3>
+                                <h4>123123</h4>
+                            </div>
+                        <!-- <v-sheet :color="colors[i]" height="100%">
                             <div class="d-flex fill-height justify-center align-center">
                                 <div class="text-h2">
                                     {{ content }}
                                 </div>
                             </div>
-                        </v-sheet>
-                    </v-carousel-item>
+                        </v-sheet> -->
+                        </v-carousel-item>
+                    </nuxt-link>
+
                 </v-carousel>
             </div>
             <!-- 輪播列表 -->
@@ -40,7 +50,7 @@
                     :key="item"
                     @click="emit('change-wrapper', index),onWrapperClick($event, item, index)"
                     >
-                    <h3>{{ item }}</h3>
+                    <h3>{{ item.description }}</h3>
                 </div>
             </div>
         </div>
@@ -58,12 +68,12 @@ const { selected } = toRefs(props)
 console.log(props)
 
 const contents=[
-    '快來大買家，好禮送不完',
-    '台中驚傳有經船的驚傳，嚇死寶寶',
-    '寶寶不哭，哭不哭大寶寶，寶寶哭',
-    '體育的賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率體育賠率，體育賠率，',
-    '明天是星期六，後天是星期日',
-    '在非洲每過60秒，就有一分鐘過去'
+    {description:'快來大買家，好禮送不完',src:'https://picsum.photos/600/400?random=1'},
+    {description:'台中驚傳有經船的驚傳，嚇死寶寶', src:'https://picsum.photos/600/400?random=2'},
+    {description:'寶寶不哭，哭不哭大寶寶，寶寶哭', src:'https://picsum.photos/600/400?random=3'},
+    {description:'體育的賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率體育賠率，體育賠率，', src:'https://picsum.photos/600/400?random=4'},
+    {description:'明天是星期六，後天是星期日', src:'https://picsum.photos/600/400?random=5'},
+    {description:'在非洲每過60秒，就有一分鐘過去', src:'https://picsum.photos/600/400?random=6'}
 ]
 
 const onWrapperClick=(event, item, index)=>{
@@ -155,6 +165,26 @@ watch(()=> contIndex, (index) =>{
         }
         .sliderSideInfoItem.active{
             color: #ee3324;
+        }
+    }
+
+    .v-carousel-item{
+        .content{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            padding: 1rem 1rem 3rem;
+            color: #fff;
+            z-index:2;
+            h3{
+                padding-bottom: 0.75rem;
+                font-size: 1.5rem;
+            }
+            h4{
+                font-size: 1rem;
+            }
         }
     }
 

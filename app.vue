@@ -9,21 +9,11 @@
 
 </template>
 
-<style>
-.v-toolbar {
-  padding: 0px !important;
-}
+<script setup>
 
-.v-toolbar__extension {
-  height: 60px !important;
-}
+</script>
 
-.v-toolbar__content {
-  padding: 0px !important;
-}
-
-a{
-  text-decoration: unset;
-  color: unset;
-}
+<style lang="scss">
+@import '@/assets/css/scss/all.scss'
 </style>
+

@@ -1,5 +1,18 @@
 <template>
-    <v-carousel cycle height="400" hide-delimiter-background show-arrows="hover">
+    <v-carousel 
+        cycle 
+        height="400" 
+        hide-delimiter-background 
+        show-arrows="hover" 
+        delimiter-icon="mdi-color-helper"
+        color="white">
+        <!-- 自訂Arrows插槽 -->
+        <!-- <template v-slot:prev="{ props }">
+            <v-btn variant="elevated" color="success" @click="props.onClick">Previous slide</v-btn>
+        </template>
+        <template v-slot:next="{ props }">
+            <v-btn variant="elevated" color="info" @click="props.onClick">Next slide</v-btn>
+        </template> -->
         <v-carousel-item v-for="(slide, i) in slides" :key="i">
             <v-sheet :color="colors[i]" height="100%">
                 <div class="d-flex fill-height justify-center align-center">
@@ -11,31 +24,49 @@
         </v-carousel-item>
     </v-carousel>
 </template>
-<script>
-export default {
-    data() {
-        return {
-            colors: [
-                'indigo',
-                'warning',
-                'pink darken-2',
-                'red lighten-1',
-                'deep-purple accent-4',
-            ],
-            slides: [
-                'First',
-                'Second',
-                'Third',
-                'Fourth',
-                'Fifth',
-            ],
-        }
-    },
-}
+<script setup>
+
+const colors = [
+    'indigo',
+    'warning',
+    'pink darken-2',
+    'red lighten-1',
+    'deep-purple accent-4',
+]
+
+const slides = [
+    'First',
+    'Second',
+    'Third',
+    'Fourth',
+    'Fifth',
+]
+
+
+// export default {
+//     data() {
+//         return {
+//             colors: [
+//                 'indigo',
+//                 'warning',
+//                 'pink darken-2',
+//                 'red lighten-1',
+//                 'deep-purple accent-4',
+//             ],
+//             slides: [
+//                 'First',
+//                 'Second',
+//                 'Third',
+//                 'Fourth',
+//                 'Fifth',
+//             ],
+//         }
+//     },
+// }
 </script>
 
 <style>
-    .v-carousel{
-        border-radius: 5px;
-    }
+.v-carousel {
+    border-radius: 5px;
+}
 </style>

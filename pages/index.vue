@@ -4,7 +4,8 @@
             <prop-cycle></prop-cycle>
             <div class="grid-area">
                 <div class="left-grid-area">
-                    <article-title></article-title>
+                    <article-title :data="articleData"></article-title>
+                    <carouselWrapper :selected="wrapper" @change-wrapper="wrapper = $event"></carouselWrapper>
                 </div>
                 <div class="right-grid-area">
 
@@ -13,6 +14,21 @@
         </div>
     </div>
 </template>
+
+<script setup>
+const articleData = {
+    titleTxt: '最新消息',
+    subtitleTxt: '讓您輕鬆掌握熱門賽事訊息'
+}
+
+const wrapper = ref(0)
+
+const wrapperHandler =(value)=>{
+    console.log(value)
+    // wrapper.value = value
+    // console.log(wrapper)
+}
+</script>
 
 <style lang="scss">
 .homepage {

@@ -170,7 +170,7 @@
             </div>
         </div>
         <div class="bottom-container">
-            <div class="copy-right">Copyrights by BBIN GROUP 寶盈集團 2021. All Rights Reserved.</div>
+            <div class="copy-right">Copyrights by  2021. All Rights Reserved.</div>
             <div class="right-btn--wrapper"><a href="/faq/register-failure-summary" class="">
                     <p data-v-432826d2="">常见问题</p>
                 </a><a href="/terms-of-service">

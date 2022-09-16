@@ -2,8 +2,8 @@
     <div class="hot-articles">
         <div class="title-wrapper">
             <div class="title" >
-                <h1 class="title-txt" >最新资讯</h1>
-                <h2 class="subtitle-txt" >让您轻松掌握热门市场动态</h2>
+                <h1 class="title-txt">{{ titleTxt }}</h1>
+                <h2 class="subtitle-txt" >{{ subtitleTxt }}</h2>
             </div>
             <a href="" class="see-more-link">
                 <p>看更多</p>
@@ -12,6 +12,18 @@
         </div>
     </div>
 </template>
+
+<script setup>
+const props = defineProps({
+    data: String
+})
+
+console.log(props)
+const { titleTxt, subtitleTxt } = toRefs(props.data)
+
+
+</script>
+
 
 <style lang="scss">
 .hot-articles {

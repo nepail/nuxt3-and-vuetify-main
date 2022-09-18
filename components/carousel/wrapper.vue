@@ -14,14 +14,23 @@
                     v-model="contIndex"
                     >
                     <!-- 自訂Arrows插槽 -->
-                    <!-- <template v-slot:prev="{ props }">
-                        <v-btn variant="elevated" color="success" @click="props.onClick">Previous slide</v-btn>
+                    <template v-slot:prev="{ props }">
+                        <v-btn variant="elevated" class="wrapper-btn left" @click="props.onClick">
+                            <v-icon color="white">
+                                mdi-chevron-left
+                            </v-icon>
+                        </v-btn>
                     </template>
                     <template v-slot:next="{ props }">
-                        <v-btn variant="elevated" color="info" @click="props.onClick">Next slide</v-btn>
-                    </template> -->
+                        <v-btn variant="elevated" class="wrapper-btn right" @click="props.onClick">
+                            <v-icon color="white">
+                                mdi-chevron-right
+                            </v-icon>
+                        </v-btn>
+                    </template>
                     <nuxt-link to="/about">
                         <v-carousel-item 
+                            height="400"
                             v-for="(content, i) in contents" 
                             :src="content.src"
                             :key="i">
@@ -29,7 +38,7 @@
                                 <h3>{{ content.description}}</h3>
                                 <h4>123123</h4>
                             </div>
-                        <!-- <v-sheet :color="colors[i]" height="100%">
+                        <!-- <v-sheet  height="100%">
                             <div class="d-flex fill-height justify-center align-center">
                                 <div class="text-h2">
                                     {{ content }}
@@ -135,6 +144,10 @@ watch(()=> contIndex, (index) =>{
         position:relative;
         overflow: hidden;
         grid-column: 1/4;
+        &:hover .right, 
+        &:hover .left{
+            opacity: 1;
+        }
     }
 
     .sliderSideInfo{
@@ -158,10 +171,11 @@ watch(()=> contIndex, (index) =>{
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
                 line-height: 1.4;
+                &:hover{
+                    color: #ee3324;
+                }
             }
-            h3:hover{
-                color: #ee3324;
-            }
+
         }
         .sliderSideInfoItem.active{
             color: #ee3324;
@@ -185,6 +199,38 @@ watch(()=> contIndex, (index) =>{
             h4{
                 font-size: 1rem;
             }
+        }
+    }
+
+    .wrapper-btn{
+        position: absolute !important;
+        top: 36%;
+        bottom: 0;
+        // background-color: rgba(255,255,255,0.2) !important;
+        background: linear-gradient(to right,rgba(255,255,255,.2) 0%,rgba(255,255,255,.5) 100%);
+        min-width: 30px !important;
+        height: 25% !important;
+        padding: 0 !important;
+        opacity:0;
+        transition: all .5s;
+        &:hover{
+            background-color: #ee3324;
+        }
+    }
+
+    .wrapper-btn.right{
+        right: 0px;
+        border-radius: 1rem 0rem 0rem 1rem !important;
+        &:hover{
+            opacity:1;
+        }
+    }
+
+    .wrapper-btn.left{
+        left: 0px;
+        border-radius: 0 1rem 1rem 0 !important;
+        &:hover{
+            opacity:1;
         }
     }
 

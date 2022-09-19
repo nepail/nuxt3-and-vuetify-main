@@ -8,10 +8,10 @@
             <div class="grid-area">
                 <div class="left-grid-area">
                     <articleTitle :data="articleData"></articleTitle>
-                    <carouselWrapper :selected="wrapper" @change-wrapper="wrapper = $event"></carouselWrapper>
+                    <carouselWrapper></carouselWrapper>
 
                     <articleTitle :data="articleData"></articleTitle>
-                    <carouselWrapper :selected="wrapper" @change-wrapper="wrapper = $event"></carouselWrapper>
+                    <carouselWrapper></carouselWrapper>
                 </div>
                 <div class="right-grid-area">
                     <articlePopular></articlePopular>
@@ -26,14 +26,6 @@ const articleData = reactive({
     titleTxt: '最新消息',
     subtitleTxt: '讓您輕鬆掌握熱門賽事訊息'
 })
-
-const wrapper = ref(0)
-
-const wrapperHandler =(value)=>{
-    console.log(value)
-    // wrapper.value = value
-    // console.log(wrapper)
-}
 </script>
 
 <style lang="scss">

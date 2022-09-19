@@ -3,7 +3,6 @@
         <div class="slider">
             <!-- 輪播圖位置 -->
             <div class="sliderWrapper">
-                <!-- <div>{{contIndex}}</div> -->
                 <v-carousel 
                     cycle 
                     height="400" 
@@ -16,16 +15,12 @@
                     <!-- 自訂Arrows插槽 -->
                     <template v-slot:prev="{ props }">
                         <v-btn variant="elevated" class="wrapper-btn left" @click="props.onClick">
-                            <v-icon color="white">
-                                mdi-chevron-left
-                            </v-icon>
+                            <v-icon color="white">mdi-chevron-left</v-icon>
                         </v-btn>
                     </template>
                     <template v-slot:next="{ props }">
                         <v-btn variant="elevated" class="wrapper-btn right" @click="props.onClick">
-                            <v-icon color="white">
-                                mdi-chevron-right
-                            </v-icon>
+                            <v-icon color="white">mdi-chevron-right</v-icon>
                         </v-btn>
                     </template>
                     <nuxt-link to="/about">
@@ -54,10 +49,10 @@
             <div class="sliderSideInfo scrollbar">
                 <div 
                     class="sliderSideInfoItem" 
-                    :class="{active: selected === index}" 
+                    :class="{active: contIndex === index}" 
                     v-for="(item, index) in contents" 
                     :key="item"
-                    @click="emit('change-wrapper', index),onWrapperClick($event, item, index)"
+                    @click="onWrapperClick($event, item, index)"
                     >
                     <h3>{{ item.description }}</h3>
                 </div>
@@ -67,14 +62,6 @@
 </template>
 
 <script setup>
-
-const props = defineProps({
-    selected: Number
-})
-
-const { selected } = toRefs(props)
-
-console.log(props)
 
 const contents=[
     {description:'快來大買家，好禮送不完',src:'https://picsum.photos/600/400?random=1'},
@@ -86,38 +73,11 @@ const contents=[
 ]
 
 const onWrapperClick=(event, item, index)=>{
-    // console.log(event)
-    // console.log(item)
-    // console.log(index)
-    // console.log(props)
     contIndex.value = index
 }
 
-//輪播圖
-const colors = [
-    'indigo',
-    'warning',
-    'pink darken-2',
-    'red lighten-1',
-    'deep-purple accent-4',
-]
-
-const slides = [
-    'First',
-    'Second',
-    'Third',
-    'Fourth',
-    'Fifth',
-]
-
 const contIndex = ref(0)
 const emit = defineEmits(['change-wrapper'])
-
-watch(()=> contIndex, (index) =>{
-    emit('change-wrapper', index.value)
-},{
-    deep: true
-})
 
 </script>
 

@@ -27,6 +27,7 @@ const { titleTxt, subtitleTxt } = toRefs(props.data)
 
 <style lang="scss">
 .hot-articles {
+    padding-top: 2.25rem;
     .title-wrapper {
         padding-top: 0;
     }

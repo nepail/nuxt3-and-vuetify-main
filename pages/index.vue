@@ -2,13 +2,19 @@
     <div class="homepage">
         <div class="homepage-main">
             <prop-cycle></prop-cycle>
+            <div class="container">
+
+            </div>
             <div class="grid-area">
                 <div class="left-grid-area">
-                    <article-title :data="articleData"></article-title>
+                    <articleTitle :data="articleData"></articleTitle>
+                    <carouselWrapper :selected="wrapper" @change-wrapper="wrapper = $event"></carouselWrapper>
+
+                    <articleTitle :data="articleData"></articleTitle>
                     <carouselWrapper :selected="wrapper" @change-wrapper="wrapper = $event"></carouselWrapper>
                 </div>
                 <div class="right-grid-area">
-
+                    <articlePopular></articlePopular>
                 </div>
             </div>
         </div>
@@ -16,10 +22,10 @@
 </template>
 
 <script setup>
-const articleData = {
+const articleData = reactive({
     titleTxt: '最新消息',
     subtitleTxt: '讓您輕鬆掌握熱門賽事訊息'
-}
+})
 
 const wrapper = ref(0)
 
@@ -36,8 +42,12 @@ const wrapperHandler =(value)=>{
     padding: 0 20px;
     width: 100%;
     flex-direction: column;
+}
 
-
+.container{
+    margin: 0 auto;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
 }
 
 @media (min-width: 992px) {
@@ -58,6 +68,16 @@ const wrapperHandler =(value)=>{
         .right-grid-area{
             width: calc(33% - 30px);
         }
+    }
+
+    .container{
+        width: 992px;
+    }
+}
+
+@media (min-width: 1280px){
+    .container{
+        width: 1200px;
     }
 }
 </style>

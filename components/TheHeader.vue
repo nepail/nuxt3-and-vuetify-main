@@ -1,102 +1,35 @@
 <template>
     <nav class="new-header">
         <div class="header-info">
-            <div class="header-info-bar"><a href="/" class="logo--wrapper">
-                <img class="logo" loading="lazy" style=""
-                        src="../assets/esball.png" alt="240x97"
-                        name="" fakeimgres="" imgsrc="" mobileimgsrc="" isdesktopdevice="true" data-v-43199745=""></a>
-                <div class="header-info"><button class="search-btn"><img class="search-icon" loading="lazy" style=""
-                            src="/images/icons/icon-header-search.svg" alt="header search icon" name="" fakeimgres=""
-                            imgsrc="" mobileimgsrc="" isdesktopdevice="true" data-v-43199745=""></button></div>
+            <div class="header-info-bar">
+                <a href="/" class="logo--wrapper">
+                    <img class="logo" loading="lazy" style="" src="../assets/esball.png" alt="240x97" name="" fakeimgres="" imgsrc="" mobileimgsrc="" isdesktopdevice="true">
+                </a>
+                <div class="header-info">
+                </div>
+
                 <div class="header-info-pc">
-                    <div class="buttons--wrapper"><button class="news-letter-btn">订阅电子报</button>
+                    <div class="buttons--wrapper">
                         <div class="social-icon-link-list">
-                            <!--[--><a href="https://t.me/BBINOfficial" target="_blank" class="social-icon-link-item"
-                                customlinkprops="[object Object]">
-                                <!--[-->
-                                <div class="social-link-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 30 30">
-                                        <defs></defs>
-                                        <g id="a">
-                                            <g>
-                                                <path class="d"
-                                                    d="M24.834,5.35c-2.574-2.666-6.128-4.161-9.834-4.136C7.386,1.214,1.214,7.386,1.214,15s6.172,13.786,13.786,13.786,13.786-6.172,13.786-13.786c.014-3.613-1.408-7.084-3.952-9.65ZM15,27.867c-7.106,0-12.867-5.761-12.867-12.867S7.894,2.133,15,2.133c3.461-.019,6.781,1.375,9.191,3.86,2.377,2.392,3.701,5.635,3.676,9.007-.018,7.099-5.768,12.849-12.867,12.867Z">
-                                                </path>
-                                                <path class="d"
-                                                    d="M21.342,8.931v.003l-12.959,5.055c-.919,.368-.827,.827-.184,1.1l3.309,1.011,7.72-4.871c.368-.276,.735-.092,.46,.092l-6.245,5.609-.276,3.4c.368,0,.46-.184,.643-.368l1.654-1.562,3.4,2.482c.643,.368,1.011,.184,1.195-.551l2.202-10.389c.184-.919-.368-1.287-.919-1.011Z">
-                                                </path>
-                                            </g>
-                                        </g>
-                                        <g id="b"></g>
-                                        <g id="c"></g>
-                                    </svg></div>
-                                <!--]-->
-                            </a><a href="https://twitter.com/bbnews_official" target="_blank"
-                                class="social-icon-link-item" customlinkprops="[object Object]">
-                                <!--[-->
-                                <div class="social-link-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 30 30">
-                                        <defs></defs>
-                                        <g id="a">
-                                            <g>
-                                                <path class="d"
-                                                    d="M15.001,1.129h-.002c-7.639,.009-13.861,6.231-13.87,13.872,.009,7.639,6.231,13.861,13.872,13.87,7.639-.009,13.86-6.231,13.869-13.872-.008-7.64-6.229-13.862-13.869-13.87Zm0,26.742c-7.09-.009-12.863-5.782-12.872-12.87,.009-7.09,5.782-12.863,12.872-12.872,7.089,.008,12.862,5.782,12.87,12.87-.009,7.09-5.782,12.863-12.869,12.872Z">
-                                                </path>
-                                                <path class="d"
-                                                    d="M21.364,10.418c.14-.125,.269-.261,.386-.408,.115-.145,.217-.301,.305-.464,.09-.166,.164-.34,.222-.52-.019,.001-.037,.008-.052,.02-.564,.327-1.176,.565-1.813,.706-.029,.005-.058,.011-.087,.019-.031,.011-.065,0-.084-.026-.514-.532-1.199-.867-1.935-.946-.036-.004-.072,.004-.1-.021h-.411c-.055,.013-.111,.02-.167,.021-.634,.064-1.234,.321-1.716,.738-.57,.477-.951,1.143-1.073,1.876-.069,.396-.061,.802,.024,1.195,.007,.014,.007,.028,.007,.042,0,.006,0,.012,0,.018-1.254-.063-2.481-.389-3.6-.959-1.122-.568-2.112-1.365-2.907-2.339-.548,.93-.58,2.076-.083,3.034,.243,.469,.598,.872,1.032,1.174-.494-.015-.977-.147-1.409-.386-.012,.736,.235,1.453,.7,2.025,.456,.57,1.095,.966,1.809,1.12-.457,.123-.935,.142-1.4,.054,.415,1.283,1.595,2.164,2.943,2.198-1.313,1.036-2.982,1.509-4.643,1.318,.006,.026,.03,.032,.046,.042,.394,.248,.807,.464,1.234,.648,.622,.267,1.272,.463,1.938,.584,.24,.043,.481,.077,.724,.1,.013,.001,.028-.002,.038,.012h1.742c.043-.016,.088-.023,.134-.021,.806-.08,1.598-.27,2.353-.564,1.21-.472,2.294-1.216,3.169-2.176,.939-1.024,1.636-2.245,2.041-3.574,.148-.475,.256-.961,.324-1.454,.071-.497,.096-.999,.077-1.5,0-.01,0-.02,0-.03-.01-.051,.014-.08,.054-.109,.572-.421,1.07-.935,1.472-1.521l.03-.046v-.02c-.562,.246-1.157,.407-1.766,.477,.154-.104,.301-.216,.442-.337Z">
-                                                </path>
-                                            </g>
-                                        </g>
-                                        <g id="b"></g>
-                                        <g id="c"></g>
-                                    </svg></div>
-                                <!--]-->
-                            </a><a href="https://bbin.com/bbin/cn" target="_blank" class="social-icon-link-item"
-                                customlinkprops="[object Object]">
-                                <!--[-->
-                                <div class="social-link-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 30 30">
-                                        <defs></defs>
-                                        <g id="a">
-                                            <g>
-                                                <path class="d"
-                                                    d="M15.001,1.129h0C7.352,1.129,1.129,7.352,1.129,15s6.223,13.871,13.871,13.871,13.871-6.223,13.871-13.872c-.009-7.639-6.231-13.861-13.87-13.87Zm0,26.742c-7.097,0-12.871-5.774-12.871-12.871S7.903,2.129,15,2.129c7.088,.009,12.862,5.783,12.871,12.871,0,7.097-5.774,12.871-12.871,12.871Z">
-                                                </path>
-                                                <path class="d"
-                                                    d="M24.455,16.171c-.009-.178-.043-.352-.075-.526-.007-.041-.009-.083-.017-.123-.049-.229-.119-.452-.206-.668-.011-.028-.017-.059-.029-.087-.204-.479-.493-.92-.867-1.294-.035-.035-.077-.059-.114-.093-.164-.153-.334-.299-.521-.424-.038-.025-.079-.04-.117-.064-.625-.389-1.356-.626-2.147-.628-1.085-.003-2.126,.424-2.897,1.188v-1.6s.128-1.9-1.488-1.9v4.986h0c.849,.365,1.832,.203,2.52-.414,1.001-1.024,2.642-1.044,3.667-.043l.043,.043c.506,.507,.763,1.17,.768,1.836,.005,.665-.241,1.332-.739,1.847l-.005,.006-.024,.025c-1.023,1.02-2.676,1.022-3.702,.009l-.011-.01-2.382-2.382-2.381-2.383c-1.502-1.499-3.897-1.61-5.531-.257v-1.365s.002-.03,.002-.082c.002-.364-.076-1.818-1.491-1.818h-.001v6.431c-.003,2.27,1.835,4.112,4.104,4.116,1.094,.001,2.143-.433,2.916-1.208l1.464-1.466c-.849-.364-1.832-.202-2.52,.415-1.026,1.024-2.687,1.023-3.711-.003-.491-.492-.767-1.159-.767-1.855v-.009c0-.679,.264-1.332,.738-1.819l.077-.076c1.033-.977,2.655-.955,3.662,.048l2.382,2.382,2.383,2.381c.771,.771,1.818,1.203,2.908,1.2,.231,0,.461-.021,.688-.061l.111-.017c.113-.022,.224-.049,.336-.081l.034-.009c.123-.036,.243-.078,.363-.126,.032-.013,.064-.029,.1-.042,.083-.036,.167-.072,.249-.114,.042-.022,.084-.048,.127-.072,.071-.039,.141-.079,.21-.123,.039-.025,.076-.051,.114-.078,.074-.05,.147-.1,.216-.157l.087-.07c.079-.067,.156-.136,.232-.208,.8-.773,1.247-1.841,1.238-2.954,0-.063-.015-.121-.018-.184l.021-.019Z">
-                                                </path>
-                                            </g>
-                                        </g>
-                                        <g id="b"></g>
-                                        <g id="c"></g>
-                                    </svg></div>
-                                <!--]-->
-                            </a><a href="https://www.youtube.com/channel/UCT7iZPz5gEPKwUIpDjWMGHg" target="_blank"
-                                class="social-icon-link-item" customlinkprops="[object Object]">
-                                <!--[-->
-                                <div class="social-link-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 30 30">
-                                        <defs></defs>
-                                        <g id="a">
-                                            <g>
-                                                <path class="d"
-                                                    d="M15.001,1.129h0C7.352,1.129,1.129,7.352,1.129,15s6.223,13.871,13.871,13.871,13.87-6.223,13.87-13.872c-.009-7.639-6.23-13.861-13.869-13.87Zm0,26.742c-7.097,0-12.871-5.774-12.871-12.871S7.904,2.129,15,2.129c7.088,.009,12.861,5.783,12.87,12.871,0,7.097-5.773,12.871-12.87,12.871Z">
-                                                </path>
-                                                <path class="d"
-                                                    d="M22.145,9.877c-.382-.436-.93-.691-1.51-.7l-.074-.009c-2.075-.152-5.2-.191-5.551-.191h-.021c-.349,0-3.475,.039-5.547,.2h-.052c-.584,.02-1.137,.272-1.535,.7-.348,.505-.564,1.09-.629,1.7-.103,.928-.158,1.86-.165,2.794v1.287c.007,.923,.063,1.846,.166,2.763,.078,.607,.293,1.188,.629,1.7,.394,.418,.934,.668,1.508,.7h.017c.087,.012,.162,.023,.225,.037,1.149,.124,4.679,.158,5.379,.164h.015c.033,0,3.361-.002,5.557-.194h.051c.586-.02,1.14-.274,1.537-.706,.337-.511,.552-1.093,.63-1.7,.102-.918,.157-1.84,.165-2.764v-1.288c-.007-.933-.062-1.865-.165-2.793-.078-.607-.293-1.189-.63-1.7Zm-9.062,8.3v-5.939l5.2,3.039-5.2,2.9Z">
-                                                </path>
-                                            </g>
-                                        </g>
-                                        <g id="b"></g>
-                                        <g id="c"></g>
-                                    </svg></div>
-                                <!--]-->
+                            <a href="" target="_blank" class="social-icon-link-item">
+                                <div class="social-link-icon">
+                                    <svg width="38px" height="40px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 0.5c-8.563 0-15.5 6.938-15.5 15.5s6.938 15.5 15.5 15.5c8.563 0 15.5-6.938 15.5-15.5s-6.938-15.5-15.5-15.5zM23.613 11.119l-2.544 11.988c-0.188 0.85-0.694 1.056-1.4 0.656l-3.875-2.856-1.869 1.8c-0.206 0.206-0.381 0.381-0.781 0.381l0.275-3.944 7.181-6.488c0.313-0.275-0.069-0.431-0.482-0.156l-8.875 5.587-3.825-1.194c-0.831-0.262-0.85-0.831 0.175-1.231l14.944-5.763c0.694-0.25 1.3 0.169 1.075 1.219z"/>
+                                    </svg>
+                                </div>
                             </a>
-                            <!--]-->
+                            <a href="" target="_blank"
+                                class="social-icon-link-item">
+                                <div class="social-link-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024" class="icon">
+                                        <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm215.3 337.7c.3 4.7.3 9.6.3 14.4 0 146.8-111.8 315.9-316.1 315.9-63 0-121.4-18.3-170.6-49.8 9 1 17.6 1.4 26.8 1.4 52 0 99.8-17.6 137.9-47.4-48.8-1-89.8-33-103.8-77 17.1 2.5 32.5 2.5 50.1-2a111 111 0 0 1-88.9-109v-1.4c14.7 8.3 32 13.4 50.1 14.1a111.13 111.13 0 0 1-49.5-92.4c0-20.7 5.4-39.6 15.1-56a315.28 315.28 0 0 0 229 116.1C492 353.1 548.4 292 616.2 292c32 0 60.8 13.4 81.1 35 25.1-4.7 49.1-14.1 70.5-26.7-8.3 25.7-25.7 47.4-48.8 61.1 22.4-2.4 44-8.6 64-17.3-15.1 22.2-34 41.9-55.7 57.6z"/>
+                                    </svg>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="user-related--wrapper">
-                        <!----><button class="theme-btn login-out-btn">登录/注册</button>
+                        <button class="theme-btn login-out-btn">登录/注册</button>
                     </div>
                 </div>
             </div>
@@ -104,148 +37,162 @@
         <div class="nav-list-root--wrapper">
             <div class="nav-list--root">
                 <ul class="nav-list">
-                    <li class="nav-item have-child"><a href="/game/timeline">
-                            <p>游戏产品</p>
-                            <div class="icon icon-arrow-right" iconprops="[object Object]" componentname="div"></div>
+                    <li class="nav-item">
+                        <a href="/game/timeline">
+                            <p>首頁</p>                            
                         </a>
-                        <ul class="sub-nav-list">
-                            <li class="sub-nav-item"><a href="/game/casino" class=""><img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/t01mbh68Pt1JWlUWft9sByV68zf6Z5PeyyRr1ooO.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
-                                    <p class="title">电子游艺</p>
-                                </a></li>
-                            <li class="sub-nav-item"><a href="/game/live" class=""><img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/6T6TBmejEc8KZ8PcrCh8cojK3Q6K2hiFbiARCNjd.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
-                                    <p class="title">视讯直播</p>
-                                </a></li>
-                            <li class="sub-nav-item"><a href="/game/lottery" class=""><img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/GdeYtrcm70bWa0O4WZw0DPFR9swGkLNFP92EBKv7.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
-                                    <p class="title">彩票游戏</p>
-                                </a></li>
-                            <li class="sub-nav-item"><a href="/game/chess" class=""><img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/jzd7Koi6CHpC5I5TDYNslhtJlRZUtyptuc09QQbU.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
-                                    <p class="title">棋牌游戏</p>
-                                </a></li>
-                            <li class="sub-nav-item"><a href="/game/sports" class=""><img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/PIAAm5RFcVMEZh3R3oonYbULB6AksTRGKsApCKUa.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
-                                    <p class="title">体育赛事</p>
-                                </a></li>
-                        </ul>
+
                     </li>
-                    <li class="nav-item have-child"><a href="/activity/calendar">
-                            <p>营运活动</p>
-                            <div class="icon icon-arrow-right" iconprops="[object Object]" componentname="div"></div>
+                    <li class="nav-item have-child">
+                        <a href="/activity/calendar">
+                            <p>最新消息</p>
+                            <v-icon>mdi-chevron-down</v-icon>
                         </a>
                         <ul class="sub-nav-list">
-                            <li class="sub-nav-item"><a href="/activity/current" class=""><img class="sub-nav-icon"
+                            <li class="sub-nav-item">
+                                <a href="/activity/current" class="">
+                                    <img class="sub-nav-icon"
                                         loading="lazy"
                                         src="https://bbin-news.org/archives/4bszXRXcQ5Aed4iH9pSPmWybXEdSIn7JndKdKNxG.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
+                                        alt="334x234" name="">
                                     <p class="title">当前活动</p>
-                                </a></li>
-                            <li class="sub-nav-item"><a href="/activity/calendar" class=""><img class="sub-nav-icon"
+                                </a>
+                            </li>
+                            <li class="sub-nav-item">
+                                <a href="/activity/calendar" class="">
+                                    <img class="sub-nav-icon"
                                         loading="lazy"
                                         src="https://bbin-news.org/archives/DK3eL9h2uG3hZFTxjZTrbyWD2CdLLn7Hj0zupzuP.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
+                                        alt="334x234" name="">
                                     <p class="title">活动行事历</p>
-                                </a></li>
-                            <li class="sub-nav-item"><a href="/activity/template" class=""><img class="sub-nav-icon"
+                                </a>
+                            </li>
+                            <li class="sub-nav-item">
+                                <a href="/activity/template" class="">
+                                    <img class="sub-nav-icon"
                                         loading="lazy" src="https://bbin-news.org/archives/header_template.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
+                                        alt="334x234" name="">
                                     <p class="title">活动模版</p>
-                                </a></li>
-                            <li class="sub-nav-item"><a href="/activity/history" class=""><img class="sub-nav-icon"
+                                </a>
+                            </li>
+                            <li class="sub-nav-item">
+                                <a href="/activity/history" class="">
+                                    <img class="sub-nav-icon"
                                         loading="lazy"
                                         src="https://bbin-news.org/archives/xn7f1BTM3eXp2FtYmSNSehVzF08udZvZQtk5BYaC.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
+                                        alt="334x234" name="">
                                     <p class="title">历史活动</p>
-                                </a></li>
+                                </a>
+                            </li>
                         </ul>
                     </li>
-                    <li class="nav-item have-child"><a href="/platform/feature">
+                    <li class="nav-item have-child">
+                        <a href="/platform/feature">
                             <p>平台服务</p>
-                            <div class="icon icon-arrow-right" iconprops="[object Object]" componentname="div"></div>
+                            <v-icon>mdi-chevron-down</v-icon>
                         </a>
                         <ul class="sub-nav-list">
-                            <li class="sub-nav-item"><a href="/platform/feature" class=""><img class="sub-nav-icon"
+                            <li class="sub-nav-item">
+                                <a href="/platform/feature" class="">
+                                    <img class="sub-nav-icon"
                                         loading="lazy"
                                         src="https://bbin-news.org/archives/EewBbOidcK2ZvQh0a16rfMLOx6eeDtC7qKR0A2cA.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
+                                        alt="334x234" name="">
                                     <p class="title">功能特点</p>
-                                </a></li>
-                            <li class="sub-nav-item"><a href="/platform/partner" class=""><img class="sub-nav-icon"
+                                </a>
+                            </li>
+                            <li class="sub-nav-item">
+                                <a href="/platform/partner" class="">
+                                    <img class="sub-nav-icon"
                                         loading="lazy"
                                         src="https://bbin-news.org/archives/4hlJQrwrm2vIWr8UPHOp58ayoh3LtlmLHDemWO6N.png"
-                                        alt="334x234" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
+                                        alt="334x234" name="">
                                     <p class="title">合作伙伴</p>
-                                </a></li>
+                                </a>
+                            </li>
                         </ul>
                     </li>
-                    <li class="nav-item have-child"><a href="/news/industry">
+                    <li class="nav-item have-child">
+                        <a href="/news/industry">
                             <p>新闻动态</p>
-                            <div class="icon icon-arrow-right" iconprops="[object Object]" componentname="div"></div>
+                            <v-icon>mdi-chevron-down</v-icon>
                         </a>
                         <ul class="sub-nav-list">
-                            <li class="sub-nav-item"><a href="/news/industry"
-                                    class="router-link-active router-link-exact-active" aria-current="page"><img
+                            <li class="sub-nav-item">
+                                <a href="/news/industry"
+                                    class="router-link-active router-link-exact-active" aria-current="page">
+                                    <img
                                         class="sub-nav-icon" loading="lazy"
                                         src="https://bbin-news.org/archives/FKRkoUJz8Nwo5VbKLQAIcAYMVZB0HL4Pm89W1FYY.png"
-                                        alt="334x235" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
+                                        alt="334x235" name="">
                                     <p class="title">市场动态</p>
-                                </a></li>
-                            <li class="sub-nav-item"><a href="/news/brand" class=""><img class="sub-nav-icon"
+                                </a>
+                            </li>
+                            <li class="sub-nav-item">
+                                <a href="/news/brand" class="">
+                                    <img class="sub-nav-icon"
                                         loading="lazy"
                                         src="https://bbin-news.org/archives/2ZLp53bQqjhMO4CPYDQdnzPU3T4PQ4SCRIGRG1ht.png"
-                                        alt="334x235" name="" hovereffectoptions="[object Object]" fakeimgres=""
-                                        image="[object Object]" imgsrc="" mobileimg="[object Object]" mobileimgsrc=""
-                                        isdesktopdevice="true" data-v-43199745="">
+                                        alt="334x235" name="">
                                     <p class="title">品牌专栏</p>
-                                </a></li>
+                                </a>
+                            </li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="/download">
-                            <p>素材下载</p>
-                            <!---->
-                        </a>
-                        <ul class="sub-nav-list"></ul>
+                    <li class="nav-item have-child"><a href="/download">
+                            <p>賽事體育</p>
+                            <v-icon>mdi-chevron-down</v-icon>
+                        </a>                        
+                        <ul class="sub-nav-list">
+                                <li class="sub-nav-item">
+                                    <a href="/game/casino" class="">
+                                        <img class="sub-nav-icon"
+                                            loading="lazy"
+                                            src="https://bbin-news.org/archives/t01mbh68Pt1JWlUWft9sByV68zf6Z5PeyyRr1ooO.png"
+                                            alt="334x234" name="">
+                                        <p class="title">电子游艺</p>
+                                    </a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <a href="/game/live" class="">
+                                        <img class="sub-nav-icon"
+                                            loading="lazy"
+                                            src="https://bbin-news.org/archives/6T6TBmejEc8KZ8PcrCh8cojK3Q6K2hiFbiARCNjd.png"
+                                            alt="334x234" name="">
+                                        <p class="title">视讯直播</p>
+                                    </a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <a href="/game/lottery" class="">
+                                        <img class="sub-nav-icon"
+                                            loading="lazy"
+                                            src="https://bbin-news.org/archives/GdeYtrcm70bWa0O4WZw0DPFR9swGkLNFP92EBKv7.png"
+                                            alt="334x234" name="">
+                                        <p class="title">彩票游戏</p>
+                                    </a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <a href="/game/chess" class="">
+                                        <img class="sub-nav-icon"
+                                            loading="lazy"
+                                            src="https://bbin-news.org/archives/jzd7Koi6CHpC5I5TDYNslhtJlRZUtyptuc09QQbU.png"
+                                            alt="334x234" name="">
+                                        <p class="title">棋牌游戏</p>
+                                    </a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <a href="/game/sports" class="">
+                                        <img class="sub-nav-icon"
+                                            loading="lazy"
+                                            src="https://bbin-news.org/archives/PIAAm5RFcVMEZh3R3oonYbULB6AksTRGKsApCKUa.png"
+                                            alt="334x234" name="">
+                                        <p class="title">体育赛事</p>
+                                    </a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
-        <!---->
     </nav>
     <div class="new-header-padding"></div>
 </template>
@@ -448,7 +395,7 @@
     }
 
     .header-info-bar .header-info-pc .social-icon-link-list :nth-child(n+2) {
-        margin-left: 10px
+        margin-left: 20px
     }
 
     .header-info-bar .header-info-pc .social-icon-link-list .social-link-icon {
@@ -464,8 +411,13 @@
     }
 
     .header-info-bar .header-info-pc .login-out-btn {
-        margin-left: 1rem;
-        padding: .5rem .75rem
+        margin-left: 2rem;
+        padding: .5rem 1.75rem;
+        background-color: #c52b20fe;
+        color: #FFF;
+        border-radius: 20px;
+        margin-bottom: 6px;
+        
     }
 }
 

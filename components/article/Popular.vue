@@ -65,7 +65,7 @@
         font-weight: bold;
         text-align: center;
         color: #fff;
-        background-color: #404040;
+        background-color: #C82621;
         a{
             display: none;
             color: #fff;

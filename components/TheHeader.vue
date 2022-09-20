@@ -197,6 +197,21 @@
     <div class="new-header-padding"></div>
 </template>
 
+<script setup>
+
+    const props = defineProps({
+        top: { type: String, default: 'var(--header-height--pc)'}
+    })
+
+    const navProp = reactive({
+        position: 'absolute',
+        top: 'var(--header-height--pc)',
+        transition: '.2s linear'
+    })
+
+    
+</script>
+
 <style>
 .header-user {
     display: flex;
@@ -1733,7 +1748,8 @@
 
 @media (min-width: 1200px) {
     .new-header .nav-list-root--wrapper {
-        top: var(--header-height--pc);
+        /* top: var(--header-height--pc); */
+        top: v-bind(props.top);
         box-shadow: 0 6px 6px #00000029
     }
 

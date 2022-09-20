@@ -26,6 +26,8 @@ const articleData = reactive({
     titleTxt: '最新消息',
     subtitleTxt: '讓您輕鬆掌握熱門賽事訊息'
 })
+
+
 </script>
 
 <style lang="scss">

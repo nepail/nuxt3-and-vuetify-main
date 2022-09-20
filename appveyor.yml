@@ -17,6 +17,7 @@ install:
   # switch nodejs version
   - ps: Install-Product node $env:nodejs_version
   # install modules
+  - npm install push-dir --save
   - npm install
   # generate static files
   - npm run generate

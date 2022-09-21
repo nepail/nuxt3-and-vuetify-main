@@ -2,15 +2,13 @@
     <div class="homepage">
         <div class="homepage-main">
             <prop-cycle></prop-cycle>
-            <div class="container">
-
-            </div>
+            <articleCardList></articleCardList>
             <div class="grid-area">
                 <div class="left-grid-area">
                     <articleTitle :data="articleData"></articleTitle>
                     <carouselWrapper></carouselWrapper>
 
-                    <articleTitle :data="articleData"></articleTitle>
+                    <articleTitle :data="articleData2"></articleTitle>
                     <carouselWrapper></carouselWrapper>
                 </div>
                 <div class="right-grid-area">
@@ -27,6 +25,10 @@ const articleData = reactive({
     subtitleTxt: '讓您輕鬆掌握熱門賽事訊息'
 })
 
+const articleData2 = reactive({
+    titleTxt: '最新文章',
+    subtitleTxt: '一手資訊即時掌握'
+})
 
 </script>
 
@@ -38,11 +40,6 @@ const articleData = reactive({
     flex-direction: column;
 }
 
-.container{
-    margin: 0 auto;
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
-}
 
 @media (min-width: 992px) {
     .homepage-main {

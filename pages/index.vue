@@ -2,9 +2,7 @@
     <div class="homepage">
         <div class="homepage-main">
             <prop-cycle></prop-cycle>
-            <div class="container">
-
-            </div>
+            <articleCardList></articleCardList>
             <div class="grid-area">
                 <div class="left-grid-area">
                     <articleTitle :data="articleData"></articleTitle>
@@ -42,11 +40,6 @@ const articleData2 = reactive({
     flex-direction: column;
 }
 
-.container{
-    margin: 0 auto;
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
-}
 
 @media (min-width: 992px) {
     .homepage-main {

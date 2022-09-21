@@ -10,7 +10,7 @@
                     <articleTitle :data="articleData"></articleTitle>
                     <carouselWrapper></carouselWrapper>
 
-                    <articleTitle :data="articleData"></articleTitle>
+                    <articleTitle :data="articleData2"></articleTitle>
                     <carouselWrapper></carouselWrapper>
                 </div>
                 <div class="right-grid-area">
@@ -27,6 +27,10 @@ const articleData = reactive({
     subtitleTxt: '讓您輕鬆掌握熱門賽事訊息'
 })
 
+const articleData2 = reactive({
+    titleTxt: '最新文章',
+    subtitleTxt: '一手資訊即時掌握'
+})
 
 </script>
 

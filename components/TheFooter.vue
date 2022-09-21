@@ -37,20 +37,31 @@
 
 <style lang="scss">
 
-
+.footer-nav-bar{
+    display: flex;
+    .footer-nav-item{
+        a{
+            font-size: 12px;
+        }
+    }
+}
 
 
 @media (min-width: 992px) {
     .footer-nav-bar{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-direction: row !important;
         .footer-nav-item{
             background:
-            linear-gradient(white,white) left center/1px calc(100% - 10px),
             linear-gradient(white,white) right center/1px calc(100% - 10px);
             background-repeat: no-repeat;
             display:flex;
+            
                 a{
-                font-size: 18px;
-                margin: 0 80px;
+                font-size: 14px;
+                margin-right: 90px;
             }
         }
     }
@@ -59,7 +70,13 @@
 
 @media(max-width: 1450px){
     .footer-nav-bar{
-        flex-direction: column !important;
+
+        .footer-nav-item{
+            background: none;
+            a{
+        
+            }
+        }
     }
 }
 
@@ -81,8 +98,6 @@
 @media (min-width: 992px) {
     .footer .container {
         align-items: start;
-        /* padding: 3rem 0; */
-        /* max-width: 1200px; */
         box-sizing: border-box;
         flex-direction: row
     }
@@ -117,7 +132,7 @@
 .footer .info-container .social-container {
     display: flex;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: #404040;
 }
 
@@ -132,7 +147,7 @@
 .footer .info-container .social-container>* {
     cursor: pointer;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 
@@ -154,7 +169,6 @@
 
 
 .footer {
-    --nav-bottom-height: 72px;
     position: relative;
     padding-bottom: var(--nav-bottom-height);
     background-color: #404040

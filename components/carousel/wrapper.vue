@@ -28,7 +28,7 @@
                 </v-carousel>
             </div>
             <!-- 輪播列表 -->
-            <div class="sliderSideInfo scrollbar">
+            <div class="sliderSideInfo scrollbar" ref="scroller">
                 <div class="sliderSideInfoItem" :class="{active: contIndex === index}" v-for="(item, index) in contents"
                     :key="item" @click="onWrapperClick($event, item, index)">
                     <h3>{{ item.description }}</h3>
@@ -48,11 +48,11 @@
                                     <v-img :src="item.src"></v-img>
                                 </div>
                                 <div class="card-item-content">
-                                    <h3>{{item.description}}</h3>
-                                    <h5>內容內容內容內容1內容內容內容內容1內容內容內容內容1內容內容內容內容1內容內容內容內容1</h5>
+                                    <h3>{{item.title}}</h3>
+                                    <h5>{{item.description}}</h5>
                                     <div class="card-item-content-calendar">
                                         <v-icon>mdi-calendar</v-icon>
-                                        <p>2022.09.20</p>
+                                        <p>{{item.time}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -71,17 +71,33 @@
 <script setup>
 
 const contents = [
-    { description: '快來大買家，好禮送不完', src: 'https://picsum.photos/600/400?random=1' },
-    { description: '台中驚傳有經船的驚傳，嚇死寶寶', src: 'https://picsum.photos/600/400?random=2' },
-    { description: '寶寶不哭，哭不哭大寶寶，寶寶哭', src: 'https://picsum.photos/600/400?random=3' },
-    { description: '體育的賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率體育賠率，體育賠率，', src: 'https://picsum.photos/600/400?random=4' },
-    { description: '明天是星期六，後天是星期日', src: 'https://picsum.photos/600/400?random=5' },
-    { description: '在非洲每過60秒，就有一分鐘過去', src: 'https://picsum.photos/600/400?random=6' }
+    { time:'2022.09.01', title:'大買家', description: '快來大買家，好禮送不完', src: 'https://picsum.photos/600/400?random=1' },
+    { time:'2022.09.02', title:'台中經船', description: '台中驚傳有經船的驚傳，嚇死寶寶', src: 'https://picsum.photos/600/400?random=2' },
+    { time:'2022.09.03', title:'寶寶不要哭',description: '寶寶不哭，哭不哭大寶寶，寶寶哭', src: 'https://picsum.photos/600/400?random=3' },
+    { time:'2022.09.04', title:'體育賠率',description: '體育的賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率體育賠率，體育賠率，', src: 'https://picsum.photos/600/400?random=4' },
+    { time:'2022.09.05', title:'明天星期六',description: '明天是星期六，後天是星期日', src: 'https://picsum.photos/600/400?random=5' },
+    { time:'2022.09.06', title:'非洲',description: '在非洲每過60秒，就有一分鐘過去', src: 'https://picsum.photos/600/400?random=6' },
+    { time:'2022.09.07', title:'寶寶壽司',description: '寶寶葬壽司，寶寶壽司', src: 'https://picsum.photos/600/400?random=7' },
+    { time:'2022.09.08', title:'上班丸',description: '丸上班，上班丸不完', src: 'https://picsum.photos/600/400?random=8' },
+    { time:'2022.09.01', title:'大買家', description: '快來大買家，好禮送不完', src: 'https://picsum.photos/600/400?random=1' },
+    { time:'2022.09.02', title:'台中經船', description: '台中驚傳有經船的驚傳，嚇死寶寶', src: 'https://picsum.photos/600/400?random=2' },
+    { time:'2022.09.03', title:'寶寶不要哭',description: '寶寶不哭，哭不哭大寶寶，寶寶哭', src: 'https://picsum.photos/600/400?random=3' },
+    { time:'2022.09.04', title:'體育賠率',description: '體育的賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率體育賠率，體育賠率，', src: 'https://picsum.photos/600/400?random=4' },
+    { time:'2022.09.05', title:'明天星期六',description: '明天是星期六，後天是星期日', src: 'https://picsum.photos/600/400?random=5' },
+    { time:'2022.09.06', title:'非洲',description: '在非洲每過60秒，就有一分鐘過去', src: 'https://picsum.photos/600/400?random=6' },
+    { time:'2022.09.07', title:'寶寶壽司',description: '寶寶葬壽司，寶寶壽司', src: 'https://picsum.photos/600/400?random=7' },
+    { time:'2022.09.08', title:'上班丸',description: '丸上班，上班丸不完', src: 'https://picsum.photos/600/400?random=8' },
+    { time:'2022.09.05', title:'明天星期六',description: '明天是星期六，後天是星期日', src: 'https://picsum.photos/600/400?random=5' },
+    { time:'2022.09.06', title:'非洲',description: '在非洲每過60秒，就有一分鐘過去', src: 'https://picsum.photos/600/400?random=6' },
+    { time:'2022.09.07', title:'寶寶壽司',description: '寶寶葬壽司，寶寶壽司', src: 'https://picsum.photos/600/400?random=7' },
+    { time:'2022.09.08', title:'上班丸',description: '丸上班，上班丸不完', src: 'https://picsum.photos/600/400?random=8' },
+    { time:'2022.09.01', title:'大買家', description: '快來大買家，好禮送不完', src: 'https://picsum.photos/600/400?random=1' },
+    { time:'2022.09.02', title:'台中經船', description: '台中驚傳有經船的驚傳，嚇死寶寶', src: 'https://picsum.photos/600/400?random=2' },
+    { time:'2022.09.03', title:'寶寶不要哭',description: '寶寶不哭，哭不哭大寶寶，寶寶哭', src: 'https://picsum.photos/600/400?random=3' },
 ]
 
 const contentMobile = []
 const chunk = 3
-
 for(let i = 0, j = contents.length; i < j; i+=chunk){
     contentMobile.push(contents.slice(i, i + chunk))
 }
@@ -92,6 +108,18 @@ const onWrapperClick = (event, item, index) => {
 
 const contIndex = ref(0)
 const emit = defineEmits(['change-wrapper'])
+
+
+const scroller = ref()
+watch((contIndex),(o, n)=>{
+
+    let childNodeHeight = scroller.value.childNodes[1].clientHeight
+    let scrollerHeight = scroller.value.clientHeight
+    scroller.value.scrollTo({
+        top: childNodeHeight*o-scrollerHeight/2+30,
+        behavior: 'smooth'
+    })
+})
 
 </script>
 
@@ -250,10 +278,14 @@ const emit = defineEmits(['change-wrapper'])
     box-sizing: content-box;
     flex-direction: column;
     color: black !important;
+    .v-window__controls{
+        button{
+            background: none !important;
+        }
+    }
     .card-item{
         background-color: white;
         width: 100%;
-        height: 100%;
         position: relative;
         display: flex;
         align-items: center;

@@ -1,75 +1,37 @@
 <template>
     <div class="container">
-        <div class="card">
+        <div class="card" v-for="(item, i) in cardList" :key="i">
             <div class="card-img">
-                <v-img src="https://picsum.photos/600/400?random=1"></v-img>
+                <v-img :src="item.src"></v-img>
             </div>
             <div class="card-content">
                 <div class="card-content-label">
                     <a href="">活動活動</a>
                 </div>
-                <h3>大海嘯</h3>
-                <h4>尾小寶</h4>
-                <h5>聰明蛋</h5>
+                <h3>{{item.title}}</h3>
+                <h4>{{item.description}}</h4>
+                <h5>{{item.src}}</h5>
                 <div class="bottom">
                     <v-icon>mdi-calendar</v-icon>
-                    <p>2022.09.21</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <v-img src="https://picsum.photos/600/400?random=2"></v-img>
-            </div>
-            <div class="card-content">
-                <div class="card-content-label">
-                    <a href="">活動活動</a>
-                </div>
-                <h3>大海嘯</h3>
-                <h4>尾小寶</h4>
-                <h5>聰明蛋</h5>
-                <div class="bottom">
-                    <v-icon>mdi-calendar</v-icon>
-                    <p>2022.09.21</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <v-img src="https://picsum.photos/600/400?random=3"></v-img>
-            </div>
-            <div class="card-content">
-                <div class="card-content-label">
-                    <a href="">活動活動</a>
-                </div>
-                <h3>大海嘯</h3>
-                <h4>尾小寶</h4>
-                <h5>聰明蛋</h5>
-                <div class="bottom">
-                    <v-icon>mdi-calendar</v-icon>
-                    <p>2022.09.21</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <v-img src="https://picsum.photos/600/400?random=3"></v-img>
-            </div>
-            <div class="card-content">
-                <div class="card-content-label">
-                    <a href="">活動活動</a>
-                </div>
-                <h3>大海嘯</h3>
-                <h4>尾小寶</h4>
-                <h5>聰明蛋</h5>
-                <div class="bottom">
-                    <v-icon>mdi-calendar</v-icon>
-                    <p>2022.09.21</p>
+                    <p>{{item.time}}</p>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script setup>
+
+const cardList = [
+    { time:'2022.09.01', title:'大買家', description: '快來大買家，好禮送不完', src: 'https://picsum.photos/600/400?random=1' },
+    { time:'2022.09.02', title:'台中經船', description: '台中驚傳有經船的驚傳，嚇死寶寶', src: 'https://picsum.photos/600/400?random=2' },
+    { time:'2022.09.03', title:'寶寶不要哭',description: '寶寶不哭，哭不哭大寶寶，寶寶哭', src: 'https://picsum.photos/600/400?random=3' },
+    { time:'2022.09.04', title:'體育賠率',description: '體育的賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率，體育賠率體育賠率，體育賠率，', src: 'https://picsum.photos/600/400?random=4' },
+    { time:'2022.09.05', title:'明天星期六',description: '明天是星期六，後天是星期日', src: 'https://picsum.photos/600/400?random=5' },
+    { time:'2022.09.06', title:'非洲',description: '在非洲每過60秒，就有一分鐘過去', src: 'https://picsum.photos/600/400?random=6' },
+]
+
+</script>
 
 <style lang="scss">
 
@@ -134,7 +96,7 @@ $big: 992px;
                 display: -webkit-box;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 1;
                 -webkit-box-orient: vertical;
                 line-height: 1.4;
             }
@@ -143,7 +105,7 @@ $big: 992px;
                 display: -webkit-box;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 1;
                 -webkit-box-orient: vertical;
                 line-height: 1.4;
             }
@@ -152,7 +114,7 @@ $big: 992px;
                 display: -webkit-box;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 1;
                 -webkit-box-orient: vertical;
                 line-height: 1.4;
             }

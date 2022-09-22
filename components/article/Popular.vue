@@ -49,13 +49,14 @@
 
 <style lang="scss">
 .popular-articles {
-    padding: 2rem 0;
-    padding-top: 0;
+    padding: 2.875rem 0 0;
+    height: 100%;
 }
 .popular-articles-list-wrapper{
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 3px 6px #00000029;
+    height: 100%;
     .list-header{
         display: flex;
         align-items: center;
@@ -80,7 +81,7 @@
             display: flex;
             align-items: center;
             padding: 1.25rem 1.25rem 1.25rem;
-            border-top: 1px solid #d9d9d9;
+            border-bottom: 1px solid #d9d9d9;
             a{
                 position: absolute;
                 top: 0;

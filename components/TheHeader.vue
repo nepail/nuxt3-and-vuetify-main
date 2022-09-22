@@ -38,17 +38,19 @@
             <div class="nav-list--root">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="/game/timeline">
-                            <p>首頁</p>                            
-                        </a>
-
+                        <nuxt-link to="/">
+                            <p>首頁</p>
+                        </nuxt-link>
                     </li>
-                    <li class="nav-item have-child">
-                        <a href="/activity/calendar">
-                            <p>最新消息</p>
-                            <v-icon>mdi-chevron-down</v-icon>
-                        </a>
-                        <ul class="sub-nav-list">
+                    <li class="nav-item">
+                        <!-- have-child -->
+                        <nuxt-link to="/latestnews">
+                                <p>最新消息</p>
+                                <v-icon>mdi-chevron-down</v-icon>
+                            <!-- </a> -->
+                        </nuxt-link>
+
+                        <!-- <ul class="sub-nav-list">
                             <li class="sub-nav-item">
                                 <a href="/activity/current" class="">
                                     <img class="sub-nav-icon"
@@ -84,111 +86,25 @@
                                     <p class="title">历史活动</p>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
-                    <li class="nav-item have-child">
-                        <a href="/platform/feature">
+                    <li class="nav-item">
+                        <nuxt-link to="/platform">
                             <p>平台服务</p>
                             <v-icon>mdi-chevron-down</v-icon>
-                        </a>
-                        <ul class="sub-nav-list">
-                            <li class="sub-nav-item">
-                                <a href="/platform/feature" class="">
-                                    <img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/EewBbOidcK2ZvQh0a16rfMLOx6eeDtC7qKR0A2cA.png"
-                                        alt="334x234" name="">
-                                    <p class="title">功能特点</p>
-                                </a>
-                            </li>
-                            <li class="sub-nav-item">
-                                <a href="/platform/partner" class="">
-                                    <img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/4hlJQrwrm2vIWr8UPHOp58ayoh3LtlmLHDemWO6N.png"
-                                        alt="334x234" name="">
-                                    <p class="title">合作伙伴</p>
-                                </a>
-                            </li>
-                        </ul>
+                        </nuxt-link>
                     </li>
-                    <li class="nav-item have-child">
-                        <a href="/news/industry">
+                    <li class="nav-item">
+                        <nuxt-link to="/hotnews">
                             <p>新闻动态</p>
                             <v-icon>mdi-chevron-down</v-icon>
-                        </a>
-                        <ul class="sub-nav-list">
-                            <li class="sub-nav-item">
-                                <a href="/news/industry"
-                                    class="router-link-active router-link-exact-active" aria-current="page">
-                                    <img
-                                        class="sub-nav-icon" loading="lazy"
-                                        src="https://bbin-news.org/archives/FKRkoUJz8Nwo5VbKLQAIcAYMVZB0HL4Pm89W1FYY.png"
-                                        alt="334x235" name="">
-                                    <p class="title">市场动态</p>
-                                </a>
-                            </li>
-                            <li class="sub-nav-item">
-                                <a href="/news/brand" class="">
-                                    <img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/2ZLp53bQqjhMO4CPYDQdnzPU3T4PQ4SCRIGRG1ht.png"
-                                        alt="334x235" name="">
-                                    <p class="title">品牌专栏</p>
-                                </a>
-                            </li>
-                        </ul>
+                        </nuxt-link>
                     </li>
-                    <li class="nav-item have-child"><a href="/download">
-                            <p>賽事體育</p>
+                    <li class="nav-item">
+                        <nuxt-link to="/about">
+                            <p>電子試玩</p>
                             <v-icon>mdi-chevron-down</v-icon>
-                        </a>                        
-                        <ul class="sub-nav-list">
-                                <li class="sub-nav-item">
-                                    <a href="/game/casino" class="">
-                                        <img class="sub-nav-icon"
-                                            loading="lazy"
-                                            src="https://bbin-news.org/archives/t01mbh68Pt1JWlUWft9sByV68zf6Z5PeyyRr1ooO.png"
-                                            alt="334x234" name="">
-                                        <p class="title">电子游艺</p>
-                                    </a>
-                                </li>
-                                <li class="sub-nav-item">
-                                    <a href="/game/live" class="">
-                                        <img class="sub-nav-icon"
-                                            loading="lazy"
-                                            src="https://bbin-news.org/archives/6T6TBmejEc8KZ8PcrCh8cojK3Q6K2hiFbiARCNjd.png"
-                                            alt="334x234" name="">
-                                        <p class="title">视讯直播</p>
-                                    </a>
-                                </li>
-                                <li class="sub-nav-item">
-                                    <a href="/game/lottery" class="">
-                                        <img class="sub-nav-icon"
-                                            loading="lazy"
-                                            src="https://bbin-news.org/archives/GdeYtrcm70bWa0O4WZw0DPFR9swGkLNFP92EBKv7.png"
-                                            alt="334x234" name="">
-                                        <p class="title">彩票游戏</p>
-                                    </a>
-                                </li>
-                                <li class="sub-nav-item">
-                                    <a href="/game/chess" class="">
-                                        <img class="sub-nav-icon"
-                                            loading="lazy"
-                                            src="https://bbin-news.org/archives/jzd7Koi6CHpC5I5TDYNslhtJlRZUtyptuc09QQbU.png"
-                                            alt="334x234" name="">
-                                        <p class="title">棋牌游戏</p>
-                                    </a>
-                                </li>
-                                <li class="sub-nav-item">
-                                    <a href="/game/sports" class="">
-                                        <img class="sub-nav-icon"
-                                            loading="lazy"
-                                            src="https://bbin-news.org/archives/PIAAm5RFcVMEZh3R3oonYbULB6AksTRGKsApCKUa.png"
-                                            alt="334x234" name="">
-                                        <p class="title">体育赛事</p>
-                                    </a></li>
-                        </ul>
+                        </nuxt-link>                        
                     </li>
                 </ul>
             </div>

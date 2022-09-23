@@ -1,94 +1,103 @@
 <template>
-    <div class="wrapper-slid">
-        <prop-cycle></prop-cycle>
-    </div>
-    <div class="wrapper">
-        <banner-title :title="'最新消息'">
-            <div class="wrapper-container">
-                <ul class="wrapper-container-nav">
-                    <li class="wrapper-container-nav-label">
-                        <!-- <v-icon></v-icon> -->
-                        <p>全部優惠</p>
-                    </li>
-                    <li class="wrapper-container-nav-label">
-                        <p>新會員專屬</p>
-                    </li>
-                    <li class="wrapper-container-nav-label">
-                        <p>熱門主題</p>
-                    </li>
-                </ul>
-                <div class="wrapper-container-list">
-                    <div class="wrapper-container-list-card">
-                        <div class="wrapper-container-list-card-top">
-                            <img src="https://picsum.photos/400/400?random=1" alt="">
+    <div>
+        <div class="wrapper-slid">
+            <prop-cycle></prop-cycle>
+        </div>
+        <div class="wrapper">
+            <banner-title :title="'最新消息'">
+                <div class="wrapper-container">
+                    <ul class="wrapper-container-nav">
+                        <li class="wrapper-container-nav-label">
+                            <!-- <v-icon></v-icon> -->
+                            <p>全部優惠</p>
+                        </li>
+                        <li class="wrapper-container-nav-label">
+                            <p>新會員專屬</p>
+                        </li>
+                        <li class="wrapper-container-nav-label">
+                            <p>熱門主題</p>
+                        </li>
+                    </ul>
+                    <div class="wrapper-container-list">
+                        <div class="wrapper-container-list-card">
+                            <div class="wrapper-container-list-card-top">
+                                <img src="https://picsum.photos/400/400?random=1" alt="">
+                            </div>
+                            <div class="wrapper-container-list-card-bottom">
+                                <h3>2020助力世界盃</h3>
+                                <h4>結束時間:2022-12-18 23:59:59</h4>
+                            </div>
                         </div>
-                        <div class="wrapper-container-list-card-bottom">
-                            <h3>2020助力世界盃</h3>
-                            <h4>結束時間:2022-12-18 23:59:59</h4>
+                        <div class="wrapper-container-list-card">
+                            <div class="wrapper-container-list-card-top">
+                                <img src="https://picsum.photos/400/400?random=1" alt="">
+                            </div>
+                            <div class="wrapper-container-list-card-bottom">
+                                <h3>2020助力世界盃</h3>
+                                <h4>結束時間:2022-12-18 23:59:59</h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="wrapper-container-list-card">
-                        <div class="wrapper-container-list-card-top">
-                            <img src="https://picsum.photos/400/400?random=1" alt="">
+                        <div class="wrapper-container-list-card">
+                            <div class="wrapper-container-list-card-top">
+                                <img src="https://picsum.photos/400/400?random=1" alt="">
+                            </div>
+                            <div class="wrapper-container-list-card-bottom">
+                                <h3>2020助力世界盃</h3>
+                                <h4>結束時間:2022-12-18 23:59:59</h4>
+                            </div>
                         </div>
-                        <div class="wrapper-container-list-card-bottom">
-                            <h3>2020助力世界盃</h3>
-                            <h4>結束時間:2022-12-18 23:59:59</h4>
-                        </div>
-                    </div>
-                    <div class="wrapper-container-list-card">
-                        <div class="wrapper-container-list-card-top">
-                            <img src="https://picsum.photos/400/400?random=1" alt="">
-                        </div>
-                        <div class="wrapper-container-list-card-bottom">
-                            <h3>2020助力世界盃</h3>
-                            <h4>結束時間:2022-12-18 23:59:59</h4>
-                        </div>
-                    </div>
-                    <div class="wrapper-container-list-card">
-                        <div class="wrapper-container-list-card-top">
-                            <img src="https://picsum.photos/400/400?random=1" alt="">
-                        </div>
-                        <div class="wrapper-container-list-card-bottom">
-                            <h3>2022202220222022</h3>
-                            <h4>202220222022</h4>
+                        <div class="wrapper-container-list-card">
+                            <div class="wrapper-container-list-card-top">
+                                <img src="https://picsum.photos/400/400?random=1" alt="">
+                            </div>
+                            <div class="wrapper-container-list-card-bottom">
+                                <h3>2022202220222022</h3>
+                                <h4>202220222022</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </banner-title>
+            </banner-title>
+        </div>
     </div>
+
 </template>
 
 <style lang="scss">
 $big: 992px;
-.wrapper-slid{
+
+.wrapper-slid {
     position: fixed;
     top: 0;
     height: 400px;
     width: 100%;
-    .v-img__img--contain{
+
+    .v-img__img--contain {
         object-fit: cover;
     }
-    .v-carousel{
+
+    .v-carousel {
         height: 530px !important;
     }
 }
+
 .wrapper {
 
-    .loading{
+    .loading {
         position: relative;
         z-index: 1;
     }
+
     .banner {
         width: 100%;
         text-align: center;
         background-color: #fff;
         height: 470px;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         flex-direction: column;
-        &-title{
+
+        &-title {
             background-color: #ee3224;
         }
 
@@ -146,27 +155,34 @@ $big: 992px;
                 overflow: hidden;
                 box-shadow: 0 3px 6px #00000029;
                 cursor: pointer;
-                &:hover h3{
-                    color:#ee3224;
+
+                &:hover h3 {
+                    color: #ee3224;
                 }
-                &-top{
+
+                &-top {
                     height: 75%;
                     overflow: hidden;
-                    img{
+
+                    img {
                         object-fit: cover;
                         transition: .2s;
-                        &:hover{
+
+                        &:hover {
                             transform: scale(1.2);
                         }
                     }
                 }
-                &-bottom{
+
+                &-bottom {
                     padding: .8rem 1.2rem;
-                    h3{
+
+                    h3 {
                         padding-top: .4rem;
                         font-size: .9rem;
                     }
-                    h4{
+
+                    h4 {
                         padding-top: .4rem;
                         font-size: .7rem;
                         color: gray;

@@ -101,7 +101,7 @@
                         </nuxt-link>
                     </li>
                     <li class="nav-item">
-                        <nuxt-link to="/about">
+                        <nuxt-link to="/demo">
                             <p>電子試玩</p>
                             <v-icon>mdi-chevron-down</v-icon>
                         </nuxt-link>                        

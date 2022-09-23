@@ -46,7 +46,6 @@ $big: 992px;
     // grid-template-columns: repeat(1, 1fr);
     grid-auto-flow:column;  
     grid-gap:10px; 
-    margin:30px;
     overflow:auto;
     // grid-auto-flow: column;
     overflow: auto;

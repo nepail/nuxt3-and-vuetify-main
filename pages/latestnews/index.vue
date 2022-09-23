@@ -1,11 +1,8 @@
 <template>
     <div class="wrapper">
-        <div class="banner">
-            <div class="banner-title">
-                <h1>最新消息</h1>
-            </div>
-        </div>
-        <div class="wrapper-container">
+        <prop-cycle></prop-cycle>
+        <banner-title :title="'最新消息'">
+            <div class="wrapper-container">
             <ul class="wrapper-container-nav">
                 <li class="wrapper-container-nav-label">
                     <!-- <v-icon></v-icon> -->
@@ -24,7 +21,9 @@
                 <div class="wrapper-container-list-card"></div>
             </div>
         </div>
-        <div class="loading"></div>
+        </banner-title>
+
+        <!-- <div class="loading"></div> -->
     </div>
 </template>
 

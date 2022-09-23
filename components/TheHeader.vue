@@ -118,13 +118,6 @@
     const props = defineProps({
         top: { type: String, default: 'var(--header-height--pc)'}
     })
-
-    const navProp = reactive({
-        position: 'absolute',
-        top: 'var(--header-height--pc)',
-        transition: '.2s linear'
-    })
-
     
 </script>
 

@@ -4,8 +4,9 @@
             <h1>{{title}}</h1>
         </div>
     </div>
-    <slot></slot>
-    <div class="loading"></div>
+    <div class="loading">
+        <slot></slot>
+    </div>
 </template>
 
 <script setup>
@@ -37,6 +38,7 @@ const { title } = toRefs(props)
         }
     }
     .loading{
-        height: calc(100vh - 400px);
+        // height: calc(100vh - 400px);
+        background-color: #F8F7FD;
     }
 </style>

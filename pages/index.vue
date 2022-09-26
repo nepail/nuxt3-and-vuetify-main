@@ -40,6 +40,9 @@ const articleData2 = reactive({
     flex-direction: column;
 }
 
+.v-img__img--contain {
+    object-fit: cover !important;
+}
 
 @media (min-width: 992px) {
     .homepage-main {

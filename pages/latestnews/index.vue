@@ -18,44 +18,49 @@
                             <p>熱門主題</p>
                         </li>
                     </ul>
-                    <div class="wrapper-container-list">
-                        <div class="wrapper-container-list-card">
-                            <div class="wrapper-container-list-card-top">
-                                <img src="https://picsum.photos/400/400?random=1" alt="">
+                    <div class="wrapper-container-bottom">
+                        <div class="wrapper-container-list">
+                            <NuxtLink to="/latestnews/1">
+                                <div class="wrapper-container-list-card">
+                                    <div class="wrapper-container-list-card-top">
+                                        <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
+                                    </div>
+                                    <div class="wrapper-container-list-card-bottom">
+                                        <h3>2020助力世界盃</h3>
+                                        <h4>結束時間:2022-12-18 23:59:59</h4>
+                                    </div>
+                                </div>
+                            </NuxtLink>
+                            <div class="wrapper-container-list-card">
+                                <div class="wrapper-container-list-card-top">
+                                    <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
+                                </div>
+                                <div class="wrapper-container-list-card-bottom">
+                                    <h3>2020助力世界盃</h3>
+                                    <h4>結束時間:2022-12-18 23:59:59</h4>
+                                </div>
                             </div>
-                            <div class="wrapper-container-list-card-bottom">
-                                <h3>2020助力世界盃</h3>
-                                <h4>結束時間:2022-12-18 23:59:59</h4>
+                            <div class="wrapper-container-list-card">
+                                <div class="wrapper-container-list-card-top">
+                                    <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
+                                </div>
+                                <div class="wrapper-container-list-card-bottom">
+                                    <h3>2020助力世界盃</h3>
+                                    <h4>結束時間:2022-12-18 23:59:59</h4>
+                                </div>
                             </div>
-                        </div>
-                        <div class="wrapper-container-list-card">
-                            <div class="wrapper-container-list-card-top">
-                                <img src="https://picsum.photos/400/400?random=1" alt="">
-                            </div>
-                            <div class="wrapper-container-list-card-bottom">
-                                <h3>2020助力世界盃</h3>
-                                <h4>結束時間:2022-12-18 23:59:59</h4>
-                            </div>
-                        </div>
-                        <div class="wrapper-container-list-card">
-                            <div class="wrapper-container-list-card-top">
-                                <img src="https://picsum.photos/400/400?random=1" alt="">
-                            </div>
-                            <div class="wrapper-container-list-card-bottom">
-                                <h3>2020助力世界盃</h3>
-                                <h4>結束時間:2022-12-18 23:59:59</h4>
-                            </div>
-                        </div>
-                        <div class="wrapper-container-list-card">
-                            <div class="wrapper-container-list-card-top">
-                                <img src="https://picsum.photos/400/400?random=1" alt="">
-                            </div>
-                            <div class="wrapper-container-list-card-bottom">
-                                <h3>2022202220222022</h3>
-                                <h4>202220222022</h4>
+                            <div class="wrapper-container-list-card">
+                                <div class="wrapper-container-list-card-top">
+                                    <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
+                                </div>
+                                <div class="wrapper-container-list-card-bottom">
+                                    <h3>2022202220222022</h3>
+                                    <h4>202220222022</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </banner-title>
         </div>
@@ -64,7 +69,9 @@
 </template>
 
 <style lang="scss">
+$medium: 768px;
 $big: 992px;
+$large: 1200px;
 
 .wrapper-slid {
     position: fixed;
@@ -92,7 +99,7 @@ $big: 992px;
         width: 100%;
         text-align: center;
         background-color: #fff;
-        height: 470px;
+        height: 500px;
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
@@ -104,6 +111,20 @@ $big: 992px;
         @media(min-width: $big) {
             padding-top: 1rem;
             padding-bottom: 1rem;
+            height: 480px;
+        }
+
+        @media(min-width: $medium) {
+            height: 520px;
+        }
+
+        @media(min-width: $large) {
+            height: 540px;
+        }
+
+        @media(min-width: 1600px) {
+            height: 480px;
+
         }
 
         &-title {
@@ -116,10 +137,14 @@ $big: 992px;
     }
 
     &-container {
-        // margin: 0 22rem;
         padding: 0 2rem;
         height: 100%;
         background-color: #fff;
+
+        &-bottom{
+            display: flex;
+            justify-content: center;
+        }
 
         &-nav {
             display: flex;
@@ -127,12 +152,12 @@ $big: 992px;
             padding: 2rem 0;
             background-color: #fff;
             flex-wrap: wrap;
+            gap: 1rem;
 
             &-label {
                 list-style-type: none;
                 box-shadow: 0 3px 6px #00000029;
                 padding: 10px 2rem;
-                // margin: 0 .875rem;
                 border-radius: 50px;
                 gap: 10px;
             }
@@ -140,15 +165,29 @@ $big: 992px;
 
         &-list {
             background-color: #fff;
-            // height: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
             gap: 2rem;
 
+            @media(min-width: 435px) {
+                width: 435px;
+            }
+
+            @media(min-width: 1000px) {
+                width: 900px;
+            }
+
+            @media(min-width: 1330px) {
+                width: 1330px;
+            }
+
+            @media(min-width: 1920px) {
+                width: 1330px;
+            }
+
             &-card {
-                // width: 200px;
-                flex: 0 0 360px;
+                flex: 0 0 400px;
                 height: 320px;
                 background-color: #F8F7FD;
                 border-radius: 20px;

@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <div class="user-related--wrapper">
-                        <button class="theme-btn login-out-btn">登录/注册</button>
+                        <button class="theme-btn login-out-btn">登入/註冊</button>
                     </div>
                 </div>
             </div>
@@ -49,54 +49,16 @@
                                 <v-icon>mdi-chevron-down</v-icon>
                             <!-- </a> -->
                         </nuxt-link>
-
-                        <!-- <ul class="sub-nav-list">
-                            <li class="sub-nav-item">
-                                <a href="/activity/current" class="">
-                                    <img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/4bszXRXcQ5Aed4iH9pSPmWybXEdSIn7JndKdKNxG.png"
-                                        alt="334x234" name="">
-                                    <p class="title">当前活动</p>
-                                </a>
-                            </li>
-                            <li class="sub-nav-item">
-                                <a href="/activity/calendar" class="">
-                                    <img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/DK3eL9h2uG3hZFTxjZTrbyWD2CdLLn7Hj0zupzuP.png"
-                                        alt="334x234" name="">
-                                    <p class="title">活动行事历</p>
-                                </a>
-                            </li>
-                            <li class="sub-nav-item">
-                                <a href="/activity/template" class="">
-                                    <img class="sub-nav-icon"
-                                        loading="lazy" src="https://bbin-news.org/archives/header_template.png"
-                                        alt="334x234" name="">
-                                    <p class="title">活动模版</p>
-                                </a>
-                            </li>
-                            <li class="sub-nav-item">
-                                <a href="/activity/history" class="">
-                                    <img class="sub-nav-icon"
-                                        loading="lazy"
-                                        src="https://bbin-news.org/archives/xn7f1BTM3eXp2FtYmSNSehVzF08udZvZQtk5BYaC.png"
-                                        alt="334x234" name="">
-                                    <p class="title">历史活动</p>
-                                </a>
-                            </li>
-                        </ul> -->
                     </li>
                     <li class="nav-item">
                         <nuxt-link to="/platform">
-                            <p>平台服务</p>
+                            <p>平台服務</p>
                             <v-icon>mdi-chevron-down</v-icon>
                         </nuxt-link>
                     </li>
                     <li class="nav-item">
                         <nuxt-link to="/hotnews">
-                            <p>新闻动态</p>
+                            <p>新聞動態</p>
                             <v-icon>mdi-chevron-down</v-icon>
                         </nuxt-link>
                     </li>

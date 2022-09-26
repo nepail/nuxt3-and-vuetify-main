@@ -39,6 +39,7 @@ const { title } = toRefs(props)
     }
     .loading{
         // height: calc(100vh - 400px);
-        background-color: #F8F7FD;
+        // background-color: #F8F7FD;
+        background-color: #fff;
     }
 </style>

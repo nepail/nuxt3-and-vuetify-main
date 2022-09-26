@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container scrollbar">
         <div class="card" v-for="(item, i) in cardList" :key="i">
             <div class="card-img">
                 <v-img :src="item.src"></v-img>
@@ -60,7 +60,7 @@ $big: 992px;
     .card{
         margin: 0;
         margin-bottom: 2.5rem;
-
+        cursor: pointer;
         &-img{
             overflow: hidden;
             border-radius: 12px;

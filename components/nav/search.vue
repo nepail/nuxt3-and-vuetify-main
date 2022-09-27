@@ -3,11 +3,8 @@
         <div class="search-container">
             <div class="search-container-input">
                 <input type="text" placeholder="請輸入關鍵字搜尋">
-            </div>
-            <div class="search-container-btn">
                 <button>查詢</button>
             </div>
-            
         </div>
     </div>
 </template>
@@ -20,25 +17,26 @@
 .search-container{
     display: flex;
     justify-content: flex-end;
-    position: relative;
+
     &-input{
-        border: 1px solid black;
+        border: 1px solid rgb(225, 224, 224);
         border-radius: 20px;
         margin: 2rem;
 
         input{
             padding: .8rem 5rem .8rem 1.8rem;
+            font-size: 15px;
+            border-color: transparent;
+            outline: none;
         }
-    }
 
-    &-btn{
-        background-color: red;
-        padding: .5rem;
-        border-radius: 13px;
-        color: #fff;
-        position: absolute;
-        top: 38px;
-        right: 35px;
+        button{
+            background-image: linear-gradient(to right, rgb(199, 33, 33), rgb(230, 135, 11));
+            color: #fff;
+            padding: .5rem 1rem;
+            margin-right: .2rem;
+            border-radius: 35px;
+        }
     }
 }
 </style>

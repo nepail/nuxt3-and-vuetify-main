@@ -3,7 +3,7 @@
         <div class="header-info">
             <div class="header-info-bar">
                 <a href="/" class="logo--wrapper">
-                    <img class="logo" loading="lazy" style="" src="../assets/esball.png" alt="240x97" name="" fakeimgres="" imgsrc="" mobileimgsrc="" isdesktopdevice="true">
+                    <img class="logo" loading="lazy" style="" src="~/assets/esball.png" alt="240x97" name="" fakeimgres="" imgsrc="" mobileimgsrc="" isdesktopdevice="true">
                 </a>
                 <div class="header-info">
                 </div>

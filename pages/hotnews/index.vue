@@ -1,15 +1,16 @@
 <template>
-    <div>
-        <banner-title :title="'新聞動態'">
-            <div>hot news</div>
-        </banner-title>
-    </div>
+    <NuxtLayout :name="'list'" :btitle="'新聞動態'">
+        <template #content>
+            <navSearch></navSearch>
+            <articleList></articleList>
+        </template>
+    </NuxtLayout>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>

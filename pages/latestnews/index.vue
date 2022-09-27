@@ -6,59 +6,76 @@
         <div class="wrapper">
             <banner-title :title="'最新消息'">
                 <div class="wrapper-container">
-                    <ul class="wrapper-container-nav">
-                        <li class="wrapper-container-nav-label">
-                            <!-- <v-icon></v-icon> -->
-                            <p>全部優惠</p>
-                        </li>
-                        <li class="wrapper-container-nav-label">
-                            <p>新會員專屬</p>
-                        </li>
-                        <li class="wrapper-container-nav-label">
-                            <p>熱門主題</p>
-                        </li>
-                    </ul>
+
                     <div class="wrapper-container-bottom">
-                        <div class="wrapper-container-list">
-                            <NuxtLink to="/latestnews/1">
-                                <div class="wrapper-container-list-card">
-                                    <div class="wrapper-container-list-card-top">
-                                        <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
+                        <div class="wrapper-container-bottom-container">
+                            <ul class="wrapper-container-nav">
+                                <li class="wrapper-container-nav-label">
+                                    <!-- <v-icon></v-icon> -->
+                                    <p>全部優惠</p>
+                                </li>
+                                <li class="wrapper-container-nav-label">
+                                    <p>新會員專屬</p>
+                                </li>
+                                <li class="wrapper-container-nav-label">
+                                    <p>熱門主打</p>
+                                </li>
+                                <li class="wrapper-container-nav-label">
+                                    <p>視訊/電子</p>
+                                </li>
+                                <li class="wrapper-container-nav-label">
+                                    <p>體育</p>
+                                </li>
+                                <li class="wrapper-container-nav-label">
+                                    <p>VIP 專屬</p>
+                                </li>
+                            </ul>
+                            <div class="wrapper-container-bottom-bottomSection">
+                                <div class="wrapper-container-list">
+                                    <NuxtLink to="/latestnews/1">
+                                        <div class="wrapper-container-list-card">
+                                            <div class="wrapper-container-list-card-top">
+                                                <img src="https://picsum.photos/400/400?random=1" alt=""
+                                                    draggable="false">
+                                            </div>
+                                            <div class="wrapper-container-list-card-bottom">
+                                                <h3>2020助力世界盃</h3>
+                                                <h4>結束時間:2022-12-18 23:59:59</h4>
+                                            </div>
+                                        </div>
+                                    </NuxtLink>
+                                    <div class="wrapper-container-list-card">
+                                        <div class="wrapper-container-list-card-top">
+                                            <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
+                                        </div>
+                                        <div class="wrapper-container-list-card-bottom">
+                                            <h3>2020助力世界盃</h3>
+                                            <h4>結束時間:2022-12-18 23:59:59</h4>
+                                        </div>
                                     </div>
-                                    <div class="wrapper-container-list-card-bottom">
-                                        <h3>2020助力世界盃</h3>
-                                        <h4>結束時間:2022-12-18 23:59:59</h4>
+                                    <div class="wrapper-container-list-card">
+                                        <div class="wrapper-container-list-card-top">
+                                            <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
+                                        </div>
+                                        <div class="wrapper-container-list-card-bottom">
+                                            <h3>2020助力世界盃</h3>
+                                            <h4>結束時間:2022-12-18 23:59:59</h4>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-container-list-card">
+                                        <div class="wrapper-container-list-card-top">
+                                            <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
+                                        </div>
+                                        <div class="wrapper-container-list-card-bottom">
+                                            <h3>2022202220222022</h3>
+                                            <h4>202220222022</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </NuxtLink>
-                            <div class="wrapper-container-list-card">
-                                <div class="wrapper-container-list-card-top">
-                                    <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
-                                </div>
-                                <div class="wrapper-container-list-card-bottom">
-                                    <h3>2020助力世界盃</h3>
-                                    <h4>結束時間:2022-12-18 23:59:59</h4>
-                                </div>
                             </div>
-                            <div class="wrapper-container-list-card">
-                                <div class="wrapper-container-list-card-top">
-                                    <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
-                                </div>
-                                <div class="wrapper-container-list-card-bottom">
-                                    <h3>2020助力世界盃</h3>
-                                    <h4>結束時間:2022-12-18 23:59:59</h4>
-                                </div>
-                            </div>
-                            <div class="wrapper-container-list-card">
-                                <div class="wrapper-container-list-card-top">
-                                    <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
-                                </div>
-                                <div class="wrapper-container-list-card-bottom">
-                                    <h3>2022202220222022</h3>
-                                    <h4>202220222022</h4>
-                                </div>
-                            </div>
+
                         </div>
+
                     </div>
 
                 </div>
@@ -141,14 +158,19 @@ $large: 1200px;
         height: 100%;
         background-color: #fff;
 
-        &-bottom{
+        &-bottom {
             display: flex;
             justify-content: center;
+            &-bottomSection{
+                display: flex;
+                justify-content: center;
+                flex-direction: columns;
+            }
         }
 
         &-nav {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             padding: 2rem 0;
             background-color: #fff;
             flex-wrap: wrap;
@@ -160,6 +182,12 @@ $large: 1200px;
                 padding: 10px 2rem;
                 border-radius: 50px;
                 gap: 10px;
+                cursor: pointer;
+                transition: background-img .2s ease-in-out;
+                background-image: none;
+                &:hover{
+                    background-image: linear-gradient(to right,rgb(255, 193, 123), rgba(255, 193, 123, 0.515));
+                }
             }
         }
 

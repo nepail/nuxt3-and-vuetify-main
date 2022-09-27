@@ -27,7 +27,7 @@
         margin: 2rem;
 
         input{
-            padding: .8rem;
+            padding: .8rem 5rem .8rem 1.8rem;
         }
     }
 

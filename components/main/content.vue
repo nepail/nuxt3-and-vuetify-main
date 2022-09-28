@@ -59,7 +59,7 @@ const { title } = toRefs(props)
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .mainContent {
     &-title {
         font-size: 22px;

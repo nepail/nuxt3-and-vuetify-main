@@ -15,6 +15,10 @@ export default defineNuxtConfig({
   },
   css: ['vuetify/lib/styles/main.sass', 'mdi/css/materialdesignicons.min.css'],
   customVariables: ['~/assets/css/scss/variables.scss', '~/assets/css/scss/all.scss'],
+  components:{
+    global: true,
+    dirs: ['~/components']
+  },
   treeShake: true,
   build: {
     transpile: ['vuetify'],

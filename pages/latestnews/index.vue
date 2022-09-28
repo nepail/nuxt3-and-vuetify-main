@@ -8,7 +8,7 @@
             </template>
             <template #content>
                 <navLabel></navLabel>
-                <articleList></articleList>
+                <articleList :data="listData" :sfcName="copname"></articleList>
             </template>
         </NuxtLayout>
     </div>
@@ -17,7 +17,18 @@
 
 <script setup lang="ts">
     const layout: string = 'list'
-    const bTitle: string = '最新消息111ccc'
+    const bTitle: string = '最新消息'
+    const listData = [
+        { title: '2020助力世界盃1', time: '結束時間:2022-12-18 23:59:59' },
+        { title: '2020助力世界盃2', time: '結束時間:2022-12-18 23:59:59' },
+        { title: '2020助力世界盃3', time: '結束時間:2022-12-18 23:59:59' },
+        { title: '2020助力世界盃4', time: '結束時間:2022-12-18 23:59:59' },
+        { title: '2020助力世界盃5', time: '結束時間:2022-12-18 23:59:59' },
+    ]
+    const copname = 'globalStyle01'
+    const copdata = [
+
+    ]
 </script>
 
 <style lang="scss" scoped>
@@ -40,7 +51,7 @@ $large: 1200px;
     }
 }
 
-:deep .banner {
+::v-deep .banner {
     width: 100%;
     text-align: center;
     background-color: #fff;

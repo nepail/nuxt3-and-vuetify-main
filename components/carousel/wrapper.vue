@@ -123,7 +123,7 @@ watch((contIndex),(o, n)=>{
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .breakpoint {
     display: none;
 }

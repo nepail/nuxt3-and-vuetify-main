@@ -44,6 +44,8 @@ const articleData2 = reactive({
     object-fit: cover !important;
 }
 
+
+
 @media (min-width: 992px) {
     .homepage-main {
         margin: auto;

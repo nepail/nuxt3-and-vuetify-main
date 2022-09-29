@@ -16,19 +16,19 @@
 </template>
 
 <script setup lang="ts">
-    const layout: string = 'list'
-    const bTitle: string = '最新消息'
-    const listData = [
-        { title: '2020助力世界盃1', time: '結束時間:2022-12-18 23:59:59' },
-        { title: '2020助力世界盃2', time: '結束時間:2022-12-18 23:59:59' },
-        { title: '2020助力世界盃3', time: '結束時間:2022-12-18 23:59:59' },
-        { title: '2020助力世界盃4', time: '結束時間:2022-12-18 23:59:59' },
-        { title: '2020助力世界盃5', time: '結束時間:2022-12-18 23:59:59' },
-    ]
-    const copname = 'globalStyle01'
-    const copdata = [
+const layout: string = 'list'
+const bTitle: string = '最新消息'
+const listData = [
+    { title: '2020助力世界盃1', time: '結束時間:2022-12-18 23:59:59' },
+    { title: '2020助力世界盃2', time: '結束時間:2022-12-18 23:59:59' },
+    { title: '2020助力世界盃3', time: '結束時間:2022-12-18 23:59:59' },
+    { title: '2020助力世界盃4', time: '結束時間:2022-12-18 23:59:59' },
+    { title: '2020助力世界盃5', time: '結束時間:2022-12-18 23:59:59' },
+]
+const copname = 'globalStyle01'
+const copdata = [
 
-    ]
+]
 </script>
 
 <style lang="scss" scoped>
@@ -51,43 +51,45 @@ $large: 1200px;
     }
 }
 
-::v-deep .banner {
-    width: 100%;
-    text-align: center;
-    background-color: #fff;
-    height: 500px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
+:deep() {
+    .banner {
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        height: 500px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
 
-    &-title {
-        background-color: #ee3224;
-    }
+        &-title {
+            background-color: #ee3224;
+        }
 
-    @media(min-width: $big) {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        height: 480px;
-    }
+        @media(min-width: $big) {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            height: 480px;
+        }
 
-    @media(min-width: $medium) {
-        height: 520px;
-    }
+        @media(min-width: $medium) {
+            height: 520px;
+        }
 
-    @media(min-width: $large) {
-        height: 540px;
-    }
+        @media(min-width: $large) {
+            height: 540px;
+        }
 
-    @media(min-width: 1600px) {
-        height: 480px;
+        @media(min-width: 1600px) {
+            height: 480px;
 
-    }
+        }
 
-    &-title {
+        &-title {
 
-        h1 {
-            font-size: 2.25rem;
-            color: #fff;
+            h1 {
+                font-size: 2.25rem;
+                color: #fff;
+            }
         }
     }
 }

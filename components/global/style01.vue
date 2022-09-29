@@ -1,23 +1,28 @@
 <template>
     <div>
-        <div class="wrapper-container-list-card">
-            <div class="wrapper-container-list-card-top">
-                <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
+        <NuxtLink :to="`${route.path}/${index}`">
+            <div class="wrapper-container-list-card">
+                <div class="wrapper-container-list-card-top">
+                    <img src="https://picsum.photos/400/400?random=1" alt="" draggable="false">
+                </div>
+                <div class="wrapper-container-list-card-bottom">
+                    <h3>{{data.title}}</h3>
+                    <h4>{{data.time}}</h4>
+                </div>
             </div>
-            <div class="wrapper-container-list-card-bottom">
-                <h3>{{data.title}}</h3>
-                <h4>{{data.time}}</h4>
-            </div>
-        </div>
+        </NuxtLink>
     </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-    data: Object
-})
 
-const { data } = toRefs(props)
+const route = useRoute()
+const props = defineProps<{
+    data: receiveData
+    index: Number
+}>()
+
+const { data, index } = toRefs(props)
 </script>
 
 <style lang="scss" scoped>
@@ -51,8 +56,6 @@ const { data } = toRefs(props)
 
     &-bottom {
         padding: .8rem 1.2rem;
-
-        // overflow: hidden;
         h3 {
             padding-top: .4rem;
             font-size: .9rem;

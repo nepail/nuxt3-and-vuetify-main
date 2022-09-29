@@ -1,16 +1,20 @@
 <template>
     <div class="wrapper-container-bottom-bottomSection">
+        <slot></slot>
         <div class="wrapper-container-list">
-            <NuxtLink :to="`${route.path}/${index}`" v-for="(item, index) in data">
-                <component :is="sfc" :data="item"></component>
-            </NuxtLink>
+                <component
+                    v-for="(item, index) in data"
+                    :is="sfc" 
+                    :data="item"
+                    :index="index"
+                    >
+                </component>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-
-const route = useRoute()
+    
 const props = defineProps<{
     data: Object
     sfcName: string
@@ -34,7 +38,7 @@ const sfc = resolveComponent(props.sfcName)
         &-bottomSection {
             display: flex;
             justify-content: center;
-            flex-direction: columns;
+            flex-direction: column;
             padding-bottom: 5rem;
         }
     }

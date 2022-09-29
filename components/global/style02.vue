@@ -1,50 +1,61 @@
 <template>
     <div>
-        <div class="wrapper-container-list-card">
-            <div class="wrapper-container-list-card-top">
-                <img src="https://picsum.photos/400/400?random=3" alt="" draggable="false">
-            </div>
-            <div class="wrapper-container-list-card-container">
-                <div class="wrapper-container-list-card-bottom">
-                    <div class="wrapper-container-list-card-bottom-content">
-                        <div class="wrapper-container-list-card-bottom-content-top">
-                            <p class="chip">電競新聞</p>
-                            <div class="calendar-date">
-                                <v-icon color="red">mdi-calendar</v-icon>
-                                <p class="calendar-date-time">September 05, 2022</p>
-                            </div>
+        <NuxtLink :to="`${route.path}/${index}`">
+            <div class="wrapper-container-list-card">
+                <div class="wrapper-container-list-card-top">
+                    <img src="https://picsum.photos/400/400?random=3" alt="" draggable="false">
+                </div>
+                <div class="wrapper-container-list-card-container">
+                    <div class="wrapper-container-list-card-bottom">
+                        <div class="wrapper-container-list-card-bottom-content">
+                            <div class="wrapper-container-list-card-bottom-content-top">
+                                <p class="chip">電競新聞</p>
+                                <div class="calendar-date">
+                                    <v-icon color="red">mdi-calendar</v-icon>
+                                    <p class="calendar-date-time">September 05, 2022</p>
+                                </div>
 
+                            </div>
+                            <h3>{{data.title}}</h3>
+                            <h4>{{data.subTitle}}</h4>
+                            <p class="wrapper-container-list-card-bottom-content-top-content">{{data.content}}</p>
                         </div>
-                        <h3>{{data.title}}</h3>
-                        <h4>{{data.subTitle}}</h4>
-                        <p class="wrapper-container-list-card-bottom-content-top-content">{{data.content}}</p>
                     </div>
-                </div>
-                <div class="wrapper-container-list-card-container-navBar">
-                    <div class="wrapper-container-list-card-container-navBar-share nav-btn">
-                        <v-icon>mdi-share</v-icon>
-                        <p>分享</p>
-                    </div>
-                    <div class="wrapper-container-list-card-container-navBar-common nav-btn">
-                        <v-icon>mdi-comment-processing-outline</v-icon>
-                        <p>1</p>
-                    </div>
-                    <div class="wrapper-container-list-card-container-navBar-heart nav-btn">
-                        <v-icon color="red">mdi-heart-outline</v-icon>
-                        <p>1</p>
+                    <div class="wrapper-container-list-card-container-navBar">
+                        <div class="wrapper-container-list-card-container-navBar-share nav-btn">
+                            <v-icon>mdi-share</v-icon>
+                            <p>分享</p>
+                        </div>
+                        <div class="wrapper-container-list-card-container-navBar-common nav-btn">
+                            <v-icon>mdi-comment-processing-outline</v-icon>
+                            <p>1</p>
+                        </div>
+                        <div class="wrapper-container-list-card-container-navBar-heart nav-btn">
+                            <v-icon color="red">mdi-heart-outline</v-icon>
+                            <p>1</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </NuxtLink>
     </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-    data: Object
-})
 
-const { data } = toRefs(props)
+const route = useRoute()
+
+interface hotNewsData extends receiveData{
+    subTitle: string,
+    content: string
+}
+
+const props = defineProps<{
+    data: hotNewsData
+    index: Number
+}>()
+
+const { data, index } = toRefs(props)
 </script>
 
 <style lang="scss" scoped>
@@ -60,20 +71,22 @@ const { data } = toRefs(props)
     &:hover h3 {
         color: #ee3224;
     }
-    &:hover img{
+
+    &:hover img {
         transform: scale(1.2);
     }
 
-    &:hover{
+    &:hover {
         box-shadow: 0 5px 10px #000000b6;
     }
 
     &-container {
         margin: 0 1rem;
-        &-navBar{
+
+        &-navBar {
             display: flex;
 
-            .nav-btn{
+            .nav-btn {
                 width: 100%;
                 display: flex;
                 justify-content: center;
@@ -82,10 +95,12 @@ const { data } = toRefs(props)
                 padding-bottom: 1rem;
                 font-size: 12px;
                 color: gray;
-                p{
+
+                p {
                     margin-left: .3rem;
                 }
-                &:hover{
+
+                &:hover {
                     color: black;
                 }
             }

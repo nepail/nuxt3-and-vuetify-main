@@ -1,22 +1,33 @@
 <template>
     <div>
-        <div class="wrapper-container-list-card">
-            <div class="wrapper-container-list-card-top">
-                <img :src="`https://picsum.photos/400/400?random=${data.index}`" alt="" draggable="false">
+        <NuxtLink to="https://www.google.com" target="_blank" rel="noreferrer noopenner">
+            <div class="wrapper-container-list-card">
+                <div class="wrapper-container-list-card-top">
+                    <img :src="`https://picsum.photos/400/400?random=${data.index}`" alt="" draggable="false">
+                </div>
+                <div class="wrapper-container-list-card-bottom">
+                    <h3>{{data.name}}</h3>
+                </div>
             </div>
-            <div class="wrapper-container-list-card-bottom">
-                <h3>{{data.name}}</h3>
-            </div>
-        </div>
+        </NuxtLink>
     </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-    data: Object
-})
 
-const { data } = toRefs(props)
+interface platformData extends receiveData {
+    color: string
+    index: string
+    name: string
+}
+
+const route = useRoute()
+const props = defineProps<{
+    data: platformData,
+    index: Number
+}>()
+
+const { data, index } = toRefs(props)
 </script>
 
 <style lang="scss" scoped>
@@ -49,10 +60,9 @@ const { data } = toRefs(props)
     }
 
     &-bottom {
-        // padding: .8rem 1.2rem;
         display: flex;
         justify-content: center;
-
+        color: #fff;
         h3 {
             padding-top: .8rem;
             font-size: .9rem;

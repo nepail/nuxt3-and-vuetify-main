@@ -49,7 +49,7 @@ const tabClickEvent = (i: number) => emits('tabClick', i)
         }
 
         .active {
-            background: -webkit-linear-gradient(to right, red, orange);
+            background-image: linear-gradient(to right, red, orange);
             border-bottom: none;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
